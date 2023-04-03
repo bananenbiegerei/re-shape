@@ -1,0 +1,15 @@
+{
+	"name": "acf/cta",
+	"title": "Call to Action",
+	"description": "Call to Action",
+	"category": "wkmde-custom-blocks",
+	"icon": "megaphone",
+	"keywords": [],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "cta.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

@@ -1,0 +1,367 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WMDE 2023 Theme\n"
+"POT-Creation-Date: 2023-03-07 18:13+0100\n"
+"PO-Revision-Date: 2023-03-07 18:13+0100\n"
+"Last-Translator: Éric Leclercq\n"
+"Language-Team: Éric Leclercq\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: blocks.disabled/custom-teasers-swiper/block.php:88
+msgid "Custom Teasers Swiper"
+msgstr ""
+
+#: blocks/newsletter/block.php:22
+msgid "Register"
+msgstr "Anmelden"
+
+#: blocks/projects-swiper/block.php:18 functions/custom-posts.php:8
+msgid "Projects"
+msgstr ""
+
+#: blocks/projects-swiper/block.php:105
+msgid "Projects Swiper"
+msgstr ""
+
+#: blocks/testimonials-swiper/block.php:50
+msgid "Testimonials Swiper"
+msgstr ""
+
+#: blocks/theme/theme.php:21
+msgid "Theme"
+msgstr "Thema"
+
+#: blocks/wikimedia-commons-media/block.php:19
+msgid "Error: Unsupported or missing media"
+msgstr ""
+
+#: footer.php:14
+msgid "Spendenservice"
+msgstr ""
+
+#: footer.php:20
+msgid "Kontakt"
+msgstr ""
+
+#: functions/acf-blocks.php:38
+msgid "Custom Blocks"
+msgstr ""
+
+#: functions/custom-posts.php:9
+msgid "Project"
+msgstr ""
+
+#: functions/custom-posts.php:20
+msgid "Team Members"
+msgstr ""
+
+#: functions/custom-posts.php:21
+msgid "Team Member"
+msgstr ""
+
+#: functions/custom-posts.php:32
+msgid "Testimonials"
+msgstr ""
+
+#: functions/custom-posts.php:33
+msgid "Testimonial"
+msgstr ""
+
+#: functions/custom-posts.php:57
+msgctxt "Post Type General Name"
+msgid "Pressemitteilungen"
+msgstr ""
+
+#: functions/custom-posts.php:58
+msgctxt "Post Type Singular Name"
+msgid "Pressemitteilung"
+msgstr ""
+
+#: functions/custom-posts.php:59
+msgid "Pressemitteilungen"
+msgstr ""
+
+#: functions/custom-posts.php:60 functions/custom-posts.php:86
+msgid "Pressemitteilung"
+msgstr ""
+
+#: functions/custom-posts.php:61
+msgid "Pressemitteilungen-Archiv"
+msgstr ""
+
+#: functions/custom-posts.php:62
+msgid "Pressemitteilungen-Attribute"
+msgstr ""
+
+#: functions/custom-posts.php:63 functions/custom-posts.php:121
+msgid "Parent Item:"
+msgstr ""
+
+#: functions/custom-posts.php:64
+msgid "Alle Pressemitteilungen"
+msgstr ""
+
+#: functions/custom-posts.php:65
+msgid "Pressemitteilung hinzufügen"
+msgstr ""
+
+#: functions/custom-posts.php:66
+msgid "Neue Pressemitteilung hinzufügen"
+msgstr ""
+
+#: functions/custom-posts.php:67
+msgid "Neue Pressemitteilung"
+msgstr ""
+
+#: functions/custom-posts.php:68
+msgid "Pressemitteilung bearbeiten"
+msgstr ""
+
+#: functions/custom-posts.php:69
+msgid "Pressemitteilung updaten"
+msgstr ""
+
+#: functions/custom-posts.php:70
+msgid "Pressemitteilung ansehen"
+msgstr ""
+
+#: functions/custom-posts.php:71
+msgid "Pressemitteilungen ansehen"
+msgstr ""
+
+#: functions/custom-posts.php:72
+msgid "Pressemitteilung suchen"
+msgstr ""
+
+#: functions/custom-posts.php:73 functions/custom-posts.php:131
+msgid "Nicht gefunden"
+msgstr ""
+
+#: functions/custom-posts.php:74 functions/custom-posts.php:132
+msgid "Nicht im Papierkorb gefunden"
+msgstr ""
+
+#: functions/custom-posts.php:75 functions/custom-posts.php:133
+msgid "Beitragsbild"
+msgstr ""
+
+#: functions/custom-posts.php:76 functions/custom-posts.php:134
+msgid "Beitragsbild auswählen"
+msgstr ""
+
+#: functions/custom-posts.php:77 functions/custom-posts.php:135
+msgid "Beitragsbild entfernen"
+msgstr ""
+
+#: functions/custom-posts.php:78 functions/custom-posts.php:136
+msgid "Als Beitragsbild benutzen"
+msgstr ""
+
+#: functions/custom-posts.php:79
+msgid "In Pressemitteilung einfügen"
+msgstr ""
+
+#: functions/custom-posts.php:80
+msgid "Zu Pressemitteilung hochladen"
+msgstr ""
+
+#: functions/custom-posts.php:81
+msgid "Pressemitteilungen-Liste"
+msgstr ""
+
+#: functions/custom-posts.php:82 functions/custom-posts.php:140
+msgid "Items list navigation"
+msgstr ""
+
+#: functions/custom-posts.php:83 functions/custom-posts.php:141
+msgid "Filter items list"
+msgstr ""
+
+#: functions/custom-posts.php:87
+msgid "Custom Post Type für Pressemitteilungen"
+msgstr ""
+
+#: functions/custom-posts.php:115
+#, fuzzy
+#| msgid "Theme"
+msgctxt "Post Type General Name"
+msgid "Themen"
+msgstr "Themenbereich"
+
+#: functions/custom-posts.php:116
+#, fuzzy
+#| msgid "Theme"
+msgctxt "Post Type Singular Name"
+msgid "Thema"
+msgstr "Themenbereich"
+
+#: functions/custom-posts.php:117 functions/custom-taxonomies.php:69
+#, fuzzy
+#| msgid "Theme"
+msgid "Themen"
+msgstr "Themenbereich"
+
+#: functions/custom-posts.php:118 functions/custom-posts.php:144
+#: functions/custom-taxonomies.php:68
+#, fuzzy
+#| msgid "Theme"
+msgid "Thema"
+msgstr "Themenbereich"
+
+#: functions/custom-posts.php:119
+msgid "Themen-Archiv"
+msgstr ""
+
+#: functions/custom-posts.php:120
+msgid "Themen-Attribute"
+msgstr ""
+
+#: functions/custom-posts.php:122
+#, fuzzy
+#| msgid "Theme"
+msgid "Alle Themen"
+msgstr "Themenbereich"
+
+#: functions/custom-posts.php:123
+msgid "Thema hinzufügen"
+msgstr ""
+
+#: functions/custom-posts.php:124
+msgid "Neue Thema hinzufügen"
+msgstr ""
+
+#: functions/custom-posts.php:125
+msgid "Neue Thema"
+msgstr ""
+
+#: functions/custom-posts.php:126
+msgid "Thema bearbeiten"
+msgstr ""
+
+#: functions/custom-posts.php:127
+msgid "Thema updaten"
+msgstr ""
+
+#: functions/custom-posts.php:128
+msgid "Thema ansehen"
+msgstr ""
+
+#: functions/custom-posts.php:129
+#, fuzzy
+#| msgid "Themes"
+msgid "Themen ansehen"
+msgstr "Themenbereiche"
+
+#: functions/custom-posts.php:130
+msgid "Thema suchen"
+msgstr ""
+
+#: functions/custom-posts.php:137
+msgid "In Thema einfügen"
+msgstr ""
+
+#: functions/custom-posts.php:138
+msgid "Zu Thema hochladen"
+msgstr ""
+
+#: functions/custom-posts.php:139
+#, fuzzy
+#| msgid "Themes"
+msgid "Themen-Liste"
+msgstr "Themenbereiche"
+
+#: functions/custom-posts.php:145
+msgid "Custom Post Type für Themen"
+msgstr ""
+
+#: functions/custom-taxonomies.php:4
+msgid "Project Types"
+msgstr ""
+
+#: functions/custom-taxonomies.php:5
+msgid "Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:6
+msgid "All Project Types"
+msgstr ""
+
+#: functions/custom-taxonomies.php:7
+msgid "Edit Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:8
+msgid "View Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:9
+msgid "Update Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:10
+msgid "Add New Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:11
+msgid "New Project Type Name"
+msgstr ""
+
+#: functions/custom-taxonomies.php:27
+msgid "Categories"
+msgstr "Kategorien"
+
+#: functions/custom-taxonomies.php:28
+msgid "Category"
+msgstr "Kategorie"
+
+#: functions/custom-taxonomies.php:47
+msgid "Formats"
+msgstr "Formate"
+
+#: functions/custom-taxonomies.php:48
+msgid "Format"
+msgstr "Format"
+
+#: functions/menu.php:7
+msgid "Footer"
+msgstr ""
+
+#: search.php:5
+#, php-format
+msgid "Suchergebnisse für: %s"
+msgstr ""
+
+#: template-parts/social-media-menu.php:1
+msgid "Wikimedia folgen"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "WMDE 2023 Theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://bananenbiegerei.de/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bananenbiegerei"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://bananenbiegerei.de"
+msgstr ""
