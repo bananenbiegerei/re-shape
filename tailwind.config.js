@@ -66,20 +66,21 @@ module.exports = {
 				// just as if you were to extend tailwind's theme like normal https://tailwindcss.com/docs/theme#extending-the-default-theme
 				extend: {
 					// colors is used here for demonstration purposes <--- ????
-					// Create colro schemes here: https://uicolors.app/create
-					colors: {
+					// Create color schemes here: https://uicolors.app/create
+					colors: {					
 						primary: {
-							50: '#e5eeff',
-							100: '#cfe0ff',
-							200: '#a9c3ff',
-							300: '#7599ff',
-							400: '#3f5dff',
-							500: '#1423ff',
-							600: '#0008ff',
-							700: '#0009ff',
-							800: '#0008e3',
-							900: '#000094',
-							DEFAULT: '#000068',
+							50: '#fff8ed',
+							100: '#feefd6',
+							200: '#fddcab',
+							300: '#fbc276',
+							400: '#f89c3f',
+							500: '#f5801a',
+							600: '#ea6710',
+							700: '#bf4c0f',
+							800: '#983c14',
+							900: '#7a3414',
+							950: '#421808',
+							DEFAULT: '#ea6710',
 						},
 						secondary: {
 							50: '#f7f7f7',
