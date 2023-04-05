@@ -66,6 +66,7 @@ module.exports = {
 				// just as if you were to extend tailwind's theme like normal https://tailwindcss.com/docs/theme#extending-the-default-theme
 				extend: {
 					// colors is used here for demonstration purposes <--- ????
+					// Create colro schemes here: https://uicolors.app/create
 					colors: {
 						primary: {
 							50: '#e5eeff',

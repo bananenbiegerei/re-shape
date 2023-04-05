@@ -12,7 +12,7 @@ require_once get_template_directory() . '/functions/localization.php';
 require_once get_template_directory() . '/functions/features.php';
 
 // Fill in available values in some fields
-require_once get_template_directory() . '/functions/acf-field-values.php';
+// require_once get_template_directory() . '/functions/acf-field-values.php';
 
 // Load ACF blocks
 require_once get_template_directory() . '/functions/acf-blocks.php';
@@ -31,10 +31,10 @@ require_once get_template_directory() . '/functions/icons.php';
 
 // Custom posts and taxonomies
 require_once get_template_directory() . '/functions/custom-posts.php';
-require_once get_template_directory() . '/functions/custom-taxonomies.php';
+// require_once get_template_directory() . '/functions/custom-taxonomies.php';
 
 // Excerpts
 require_once get_template_directory() . '/functions/excerpts.php';
 
 // Block converter and unsupported blocks
-require_once get_template_directory() . '/functions/block-converter.php';
+// require_once get_template_directory() . '/functions/block-converter.php';
