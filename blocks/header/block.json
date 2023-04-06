@@ -1,0 +1,15 @@
+{
+	"name": "acf/header",
+	"title": "Header",
+	"description": "Header Block for re:shape",
+	"category": "wkmde-custom-blocks",
+	"icon": "header",
+	"keywords": [],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "header.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

@@ -2,7 +2,7 @@
 
 add_action(
 	'init',
-	function () {		
+	function () {
 
 		register_post_type('team', [
 			'labels' => [
@@ -33,11 +33,11 @@ add_action(
 			'show_in_admin_bar' => true,
 			'show_in_nav_menus' => true,
 			'can_export' => true,
-			'has_archive' => 'Glossar',
+			'has_archive' => true,
 			'exclude_from_search' => true,
 			'publicly_queryable' => true,
 			'capability_type' => 'post',
-			//'rewrite' => ['slug' => ''],
+			'rewrite' => ['slug' => 'glossar'],
 			'show_in_rest' => true,
 		]);
 	},
