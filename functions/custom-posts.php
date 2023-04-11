@@ -22,7 +22,7 @@ add_action(
 				'name' => _x('Glossareinträge', 'Post Type General Name', BB_TEXT_DOMAIN),
 				'singular_name' => _x('Glossareintrag', 'Post Type Singular Name', BB_TEXT_DOMAIN),
 			],
-			'supports' => ['title', 'custom-fields', 'excerpt'],
+			'supports' => ['title', 'custom-fields'],
 			'taxonomies' => [],
 			'hierarchical' => false,
 			'public' => false,
