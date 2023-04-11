@@ -10,3 +10,4 @@ const defaultIcon = "<?php echo get_stylesheet_directory_uri(); ?>/img/placehold
 <?php get_template_part('template-parts/header-top/mobile/navmenu'); ?>
 <?php get_template_part('template-parts/header-top/desktop/titlebar'); ?>
 <?php get_template_part('template-parts/header-top/desktop/navmenu'); ?>
+<?php get_template_part('template-parts/header-top/desktop/page-header'); ?>
