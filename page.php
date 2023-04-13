@@ -6,6 +6,7 @@
 
 	<?php if (has_post_thumbnail()): ?>
 
+		<?php /*
 	  <div class="bg-gray min-h-[12rem]">
 		  <div class="container grid grid-cols-12">
 			  <div class="col-span-12 lg:col-span-10 lg:col-start-2">
@@ -19,6 +20,7 @@
 			  </div>
 		  </div>
 	  </div>
+		*/ ?>
 
 	  <div class="relative">
 		  <div class="absolute top-0 left-0 bg-gray rounded-b-3xl h-20 w-full">
@@ -32,6 +34,7 @@
 
 	<?php else: ?>
 
+		<?php /*
 	  <div class="bg-gray rounded-b-3xl py-8 min-h-[12rem]">
 		  <div class="container grid grid-cols-12">
 			  <div class="col-span-12 lg:col-span-8 lg:col-start-3">
@@ -45,6 +48,8 @@
 			  </div>
 		  </div>
 	  </div>
+		*/ ?>
+
 	<?php endif; ?>
 
 	<div class="content pt-10">
