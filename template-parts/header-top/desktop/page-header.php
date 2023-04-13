@@ -3,7 +3,7 @@ $image = get_field('page_header_image');
 $text = get_field('page_header_text');
 $output = apply_filters('the_content', $text);
 if (is_page() || is_404() || is_archive()): ?>
-  <header class="bg-orange-600 rounded-b-lg pt-2 pb-2 mb-10">
+  <header class="bg-orange-600 rounded-b-lg pt-2 pb-2 mb-10 border-t-1 border-primary-900">
     <div class="grid grid-cols-12 container">
       <?php
       get_template_part('template-parts/breadcrumbs');

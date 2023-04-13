@@ -4,6 +4,8 @@ if (is_front_page() || is_404()) {
 	return;
 }
 
+
+
 global $post;
 $breadcrumbs = [];
 if ($post->post_parent) {
@@ -21,6 +23,8 @@ if ($post->post_parent) {
 	}
 } elseif (get_post_type() == 'projects') {
 	$breadcrumbs[] = '<li><a href="' . get_post_type_archive_link('projects') . '">' . __('Projects') . '</a></li>';
+} else {
+	
 }
 
 if (count($breadcrumbs) == 0) {

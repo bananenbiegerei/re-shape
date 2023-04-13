@@ -20,7 +20,7 @@ $args = [
 	'theme_location' => 'nav',
 ]; ?>
 <div class="main-nav container">
-<ul class="menu horizontal">
-	<?php wp_nav_menu($args); ?>
-</ul>
+	<ul class="menu horizontal">
+		<?php wp_nav_menu($args); ?>
+	</ul>
 </div>
