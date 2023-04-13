@@ -23,4 +23,12 @@
 	.dropdown-toggle {
 		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
 	}
+	li {		
+		&.current-menu-item {
+			a {
+				border-radius: 0 !important;
+				background-color: #ea580b;
+			}			
+		}
+	}
 }

@@ -20,6 +20,7 @@
                 "default": "Default",
                 "white": "White",
                 "gray": "Gray",
+                "primary-600": "Orange",
                 "red-50": "Red",
                 "green-50": "Green",
                 "primary-50": "Blue"

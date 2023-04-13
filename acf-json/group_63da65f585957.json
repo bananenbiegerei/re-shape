@@ -225,6 +225,7 @@
                     "choices": {
                         "default": "Default",
                         "white": "White",
+                        "primary-600": "Orange",
                         "gray": "Gray",
                         "red-50": "Red",
                         "green-50": "Green",
