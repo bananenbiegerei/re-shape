@@ -19,7 +19,7 @@ $args = [
 	'walker' => '',
 	'theme_location' => 'nav',
 ]; ?>
-<div class="main-nav container hidden lg:block">
+<div class="main-nav container hidden lg:block sticky top-0 z-40 bg-white">
 	<ul class="menu horizontal">
 		<?php wp_nav_menu($args); ?>
 	</ul>
