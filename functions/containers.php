@@ -41,7 +41,7 @@ add_filter(
 			// For other blocks with or without alignment settings
 			'default' => [
 				// Options defined in ACF: Clone Library / Alignment
-				'default' => 'col-span-12 lg:col-span-8 lg:col-start-3 ',
+				'default' => 'col-span-12',
 				'wide' => 'col-span-12',
 				'right' => 'col-span-12 lg:col-span-8 lg:col-start-5',
 			],
