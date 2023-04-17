@@ -1,0 +1,30 @@
+body.home header.page-header {
+  h1 {
+    font-weight: 700;    
+  }
+  p {
+    font-weight: 700;
+  }
+  @media screen and (min-width: 992px) {
+
+  }
+	@media screen and (min-width: 1400px) {
+		h1 {
+			font-size: 150px;
+			line-height: 1.2;			
+		}
+		p {			
+			font-size: 33px;
+			line-height: 40px;
+		}
+	}
+}
+
+header .page-header {
+  h1, h2, h3, h4 {
+    font-weight: 500;
+  }
+  p {
+    font-weight: 500;
+  }
+}
