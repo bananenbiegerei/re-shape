@@ -13,7 +13,7 @@ if (is_page() || is_404() || is_archive()): ?>
       		echo '<div class="col-span-12 lg:col-span-6 pb-10 pt-10 flex flex-col	justify-center">' . wp_kses_post($output) . '</div>';
       	endif;
       else:
-        echo '<div class="col-span-12 lg:col-span-10 lg:col-start-2 pt-10 pb-5">';
+        echo '<div class="col-span-12 lg:col-span-10 lg:col-start-2 pt-2 pb-2 lg:pt-10 lg:pb-5">';
       	if (is_archive()):
       		echo '<h1>Glossar</h1>';
       	elseif ($text):
