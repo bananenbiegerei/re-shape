@@ -34,6 +34,7 @@ add_filter(
 			'acf/organigramm' => ['default' => 'col-span-12'],
 			// Classes manually added to Columns blocks in Gutenberg editor (could be named differently...)
 			'core/columns' => [
+				'default' => 'col-span-12 mb-20',
 				'col-12' => 'col-span-12',
 				'col-10' => 'col-span-12 lg:col-span-10 lg:col-start-2',
 				'col-8' => 'col-span-12 lg:col-span-8 lg:col-start-3',
@@ -41,7 +42,7 @@ add_filter(
 			// For other blocks with or without alignment settings
 			'default' => [
 				// Options defined in ACF: Clone Library / Alignment
-				'default' => 'col-span-12',
+				'default' => 'col-span-12 lg:col-span-8 lg:col-start-3 ',
 				'wide' => 'col-span-12',
 				'right' => 'col-span-12 lg:col-span-8 lg:col-start-5',
 			],
