@@ -18,14 +18,17 @@
 
 					}
 					input[type=submit] {
-						cursor: pointer;						
+						cursor: pointer;
 					}
 				}
 			}
 			.search-icon {
 				height: 36px;
 				width: 36px;
-				background-color: magenta;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
 				line-height: 36px;
 				cursor: pointer;
 			}

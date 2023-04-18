@@ -30,7 +30,7 @@ $args = [
 					<input type="submit" alt="Search" value="Suchen" class="mx-2 px-2 rounded border" />
 				</form>
 			</div>
-			<div class="search-icon my-2 js-toggle-search-input"><span class="sr-only">Toggle Search Input</span></div>
+			<div class="search-icon my-2 js-toggle-search-input"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search') ?></div>
 		</li>
 	</ul>
 </div>
