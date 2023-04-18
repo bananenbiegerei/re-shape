@@ -23,3 +23,7 @@ for (sel in SwipersConfig) {
 	});
 }
 window.Swipers = Swipers;
+
+jQuery('.js-toggle-search-input').on('click', function() {
+	jQuery('.js-search-input-wrapper').toggle();
+});

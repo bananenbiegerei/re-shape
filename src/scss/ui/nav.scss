@@ -1,8 +1,35 @@
 .menu {
 	&.horizontal {
 		@apply flex gap-3;
+		position: relative;
 	}
 	li {
+		
+		&.search-icon-wrapper {
+			position: absolute;
+			right: 0;
+			display: flex;
+			.search-input-wrapper {
+				display: none;
+				margin-top: 5px;
+				form {
+					display: flex;
+					input#search {
+
+					}
+					input[type=submit] {
+						cursor: pointer;						
+					}
+				}
+			}
+			.search-icon {
+				height: 36px;
+				width: 36px;
+				background-color: magenta;
+				line-height: 36px;
+				cursor: pointer;
+			}
+		}
 		a {
 			@apply inline-flex items-center text-base py-2 px-4;
 			line-height: 36px;
