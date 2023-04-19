@@ -4,7 +4,7 @@
 	}
 	li {
 		a {
-			@apply inline-flex items-center text-base py-2 px-4 font-alt hover:text-primary-600;
+			@apply inline-flex items-center text-base py-2 px-4 font-alt hover:text-gray-600 leading-9;
 		}
 		&.current-menu-item {
 			a {
@@ -31,7 +31,7 @@
 	li {		
 		&.current-menu-item {
 			a {				
-				background-color: #ea580b;
+				@apply bg-primary;
 			}			
 		}
 	}
