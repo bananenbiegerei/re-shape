@@ -2,7 +2,7 @@
 <div class="grid grid-cols-12 container">
 	<div class="col-span-12 mb-20">
 		<?php if (have_posts()) : ?>
-			<h1 class=""><?php printf(__('Suchergebnisse für: %s', 'wmde'), get_search_query()); ?></h1>
+			<h1 class="mt-6 mb-10"><?php printf(__('Suchergebnisse für: %s', 'wmde'), get_search_query()); ?></h1>
 			<div class="wp-block-columns is-layout-flex wp-container-15">
 				<?php while (have_posts()) :
 					the_post();
