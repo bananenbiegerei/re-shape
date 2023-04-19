@@ -42,92 +42,69 @@ jQuery(document).ready(function($) {
 			}
 		});
 		
+		// Create an array to store the hashtags and texts
+		// var glossaryInfo = [];
 
-		// Erstelle ein Array, um die Hashtags und Texte zu speichern
-		var glossaryInfo = [];
-
-		// Gehe durch alle <dt>-Elemente
-		$('dt').each(function() {
-				// Überprüfe, ob das Element ein data-info-text-Attribut hat
-				if ($(this).attr('data-info-text')) {
-						// Füge den Hashtag und den Text zum Array hinzu
-						glossaryInfo.push({
-								hashtag: $(this).text(),
-								text: $(this).attr('data-info-text')
-						});
-				}
-		});
-
-		console.log(glossaryInfo);
-
-		// Gehe durch alle Anker-Elemente
-		// $('a').each(function() {
-		// 		var href = $(this).attr('href');
-		// 		// Überprüfe, ob das href-Attribut einen Hashtag enthält
-		// 		if (href && href.indexOf('#') !== -1) {
-		// 				// Erstelle die ID für das Ziel-Div
-		// 				var targetId = 'glossary_info-' + href.split('#')[1];
-		// 				// Erstelle das Div-Element und füge es als Nachbar-Element hinzu
-		// 				$('<div>')
-		// 					.attr('id', targetId)
-		// 					.attr('data-hashtag', href.split('#')[1])
-		// 					.css('display', 'none')
-		// 					.addClass('border rounded p-2')
-		// 					.insertAfter($(this));
+		// // Go through all <dt> elements
+		// $('dt').each(function() {
+		// 		// Check if the element has a data-info-text attribute
+		// 		if ($(this).attr('data-info-text')) {
+		// 				// Add the hashtag and text to the array
+		// 				glossaryInfo.push({
+		// 						hashtag: $(this).text(),
+		// 						text: $(this).attr('data-info-text')
+		// 				});
 		// 		}
 		// });
 
-		// Gehe durch alle Anker-Elemente
-		$('a').each(function() {
-			var href = $(this).attr('href');
-			// Überprüfe, ob das href-Attribut einen Hashtag enthält
-			if (href && href.indexOf('#') !== -1) {
-					// Erstelle die ID für das Ziel-Span
-					var targetId = 'glossary_info-' + href.split('#')[1];
-					// Erstelle das Span-Element und füge es als untergeordnetes Element hinzu
-					$('<span>')
-							.attr('id', targetId)
-							.attr('data-hashtag', href.split('#')[1])
-							.css('display', 'none')
-							.addClass('block absolute border rounded p-2 top-10 left-0 z-20 !text-black w-20 bg-white text-sm')
-							.appendTo($(this));
-					// Füge die Klasse "relative" zum Anker hinzu
-					$(this).addClass('relative');
-			}
-		});
+		// Go through all anchor elements
+		// $('a').each(function() {
+		// 		var href = $(this).attr('href');
+		// 		// Check if the href attribute contains a hashtag
+		// 		if (href && href.indexOf('#') !== -1) {
+		// 				// Create the ID for the target span
+		// 				var targetId = 'glossary_info-' + href.split('#')[1];
+		// 				// Create the span element and add it as a child element
+		// 				$('<span>')
+		// 						.attr('id', targetId)
+		// 						.attr('data-hashtag', href.split('#')[1])
+		// 						.css('display', 'none')
+		// 						.addClass('block absolute border rounded p-2 top-10 left-0 z-20 !text-black w-20 bg-white text-sm')
+		// 						.appendTo($(this));
+		// 				// Add the "relative" class to the anchor
+		// 				$(this).addClass('relative');
+		// 		}
+		// });
 
-		// Gehe durch alle Span-Elemente mit einem data-hashtag-Attribut
-		$('span[data-hashtag]').each(function() {
-				// Hole den Wert des data-hashtag-Attributs
-				var hashtag = $(this).attr('data-hashtag');
-				console.log(hashtag);
-				// Suche im Array nach einem Eintrag mit dem gleichen Hashtag
-				var info = glossaryInfo.find(function(item) {
-						return item.hashtag.toLowerCase() === hashtag.toLowerCase();
-				});
-				console.log(info);
-				// Wenn ein Eintrag gefunden wurde, kopiere den Text in das Span-Element
-				if (info) {
-						$(this).text(info.text);
-				}
-		});
-
-
+		// Go through all span elements with a data-hashtag attribute
+		// $('span[data-hashtag]').each(function() {
+		// 		// Get the value of the data-hashtag attribute
+		// 		var hashtag = $(this).attr('data-hashtag');
+		// 		// Search in the array for an entry with the same hashtag
+		// 		var info = glossaryInfo.find(function(item) {
+		// 				return item.hashtag.toLowerCase() === hashtag.toLowerCase();
+		// 		});
+		// 		console.log(info);
+		// 		// If an entry was found, copy the text into the span element
+		// 		if (info) {
+		// 				$(this).text(info.text);
+		// 		}
+		// });
 
 		// show info span on hover
-		$('a').hover(function() {
-			var href = $(this).attr('href');
-			if (href.indexOf('#') !== -1) {
-					var targetId = 'glossary_info-' + href.split('#')[1];
-					$('#' + targetId).fadeIn();
-			}
-		}, function() {
-			var href = $(this).attr('href');
-			if (href.indexOf('#') !== -1) {
-					var targetId = 'glossary_info-' + href.split('#')[1];
-					$('#' + targetId).fadeOut();
-			}
-		});
+		// $('a').hover(function() {
+		// 	var href = $(this).attr('href');
+		// 	if (href.indexOf('#') !== -1) {
+		// 			var targetId = 'glossary_info-' + href.split('#')[1];
+		// 			$('#' + targetId).fadeIn();
+		// 	}
+		// }, function() {
+		// 	var href = $(this).attr('href');
+		// 	if (href.indexOf('#') !== -1) {
+		// 			var targetId = 'glossary_info-' + href.split('#')[1];
+		// 			$('#' + targetId).fadeOut();
+		// 	}
+		// });
 		
-	} // end hasClass ..archive-glossary
+	} // end hasClass .post-type-archive-glossary
 });
