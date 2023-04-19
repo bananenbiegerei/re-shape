@@ -37,7 +37,7 @@ $args = [
 					>
 						<form class="flex gap-5 form-sm" action="<?php echo home_url('/'); ?>" method="get">
 							<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-							<input type="submit" alt="Search" value="Suchen" class="btn btn-sm sr-only" />
+							<input type="submit" alt="Search" value="Suchen" class="btn btn-sm" />
 						</form>
 					</div>
 					<button class="btn btn-ghost btn-icon-only !text-black" x-on:click="open = ! open"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search','icon-sm') ?></button>
