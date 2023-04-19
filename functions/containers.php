@@ -34,7 +34,7 @@ add_filter(
 			'acf/organigramm' => ['default' => 'col-span-12'],
 			// Classes manually added to Columns blocks in Gutenberg editor (could be named differently...)
 			'core/columns' => [
-				'default' => 'col-span-12 mb-20',
+				'default' => 'col-span-12',
 				'col-12' => 'col-span-12',
 				'col-10' => 'col-span-12 lg:col-span-10 lg:col-start-2',
 				'col-8' => 'col-span-12 lg:col-span-8 lg:col-start-3',

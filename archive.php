@@ -17,7 +17,7 @@
 					$query = new WP_Query($args);
 					while ($query->have_posts()) : $query->the_post();
 					?>
-						<dt class="col-span-12 lg:col-span-4 lg:col-start-2 text-2xl mb-5"><?php the_title(); ?></dt>
+						<dt class="col-span-12 lg:col-span-4 lg:col-start-2 text-2xl mb-5 font-alt"><?php the_title(); ?></dt>
 						<dd class="col-span-12 lg:col-span-6 text-xl mb-5">
 							<?php
 							$text = get_field('glossary_description');

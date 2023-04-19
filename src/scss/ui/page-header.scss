@@ -10,8 +10,8 @@ body.home header.page-header {
   }
 }
 
-header .page-header {
+header.page-header {
   h1, h2, h3, h4, p {
-    @apply font-bold;
+    @apply text-black;
   }
 }
