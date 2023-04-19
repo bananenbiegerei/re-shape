@@ -15,3 +15,10 @@ textarea {
 input[type="checkbox"] {
 	@apply rounded border-gray-300 text-primary shadow-sm focus:border-focus-300 focus:ring focus:ring-offset-0 focus:ring-focus-200 focus:ring-opacity-50;
 }
+.form-sm {
+	input[type="text"],
+	input[type="email"],
+	input[type="date"] {
+		@apply p-1;
+	}
+}

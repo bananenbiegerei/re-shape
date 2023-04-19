@@ -22,15 +22,25 @@ $args = [
 <div class="main-nav container hidden lg:block sticky top-0 z-40 bg-white border-b border-primary-900">
 	<ul class="menu horizontal">
 		<?php wp_nav_menu($args); ?>
-		<li class="search-icon-wrapper">
-			<div class="search-input-wrapper js-search-input-wrapper">
-				<form action="<?php echo home_url('/'); ?>" method="get">
-					<?php /* <label for="search">Search in <?php echo home_url('/'); ?></label> */ ?>
-					<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-					<input type="submit" alt="Search" value="Suchen" class="mx-2 px-2 rounded border" />
-				</form>
+		<li class="absolute right-0 h-full">
+			<div class="flex gap-5 items-center h-full" x-data="{ open: false }">
+				<div 
+				x-show="open"
+				x-transition:enter="transition ease-out duration-300"
+				x-transition:enter-start="opacity-0 scale-90"
+				x-transition:enter-end="opacity-100 scale-100"
+				x-transition:leave="transition ease-in duration-300"
+				x-transition:leave-start="opacity-100 scale-100"
+				x-transition:leave-end="opacity-0 scale-90"
+				@click.outside="open = false"
+				>
+					<form class="flex gap-5 form-sm" action="<?php echo home_url('/'); ?>" method="get">
+						<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+						<input type="submit" alt="Search" value="Suchen" class="btn btn-sm sr-only" />
+					</form>
+				</div>
+				<button class="btn btn-ghost btn-icon-only" x-on:click="open = ! open"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search','icon-sm') ?></button>
 			</div>
-			<div class="search-icon my-2 js-toggle-search-input"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search') ?></div>
 		</li>
 	</ul>
 </div>
