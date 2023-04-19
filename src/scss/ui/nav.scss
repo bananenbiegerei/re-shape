@@ -1,41 +1,10 @@
 .menu {
 	&.horizontal {
-		@apply flex gap-3;
-		position: relative;
+		@apply flex gap-3 relative items-center;
 	}
 	li {
-		
-		&.search-icon-wrapper {
-			position: absolute;
-			right: 0;
-			display: flex;
-			.search-input-wrapper {
-				display: none;
-				margin-top: 5px;
-				form {
-					display: flex;
-					input#search {
-
-					}
-					input[type=submit] {
-						cursor: pointer;
-					}
-				}
-			}
-			.search-icon {
-				height: 36px;
-				width: 36px;
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				text-align: center;
-				line-height: 36px;
-				cursor: pointer;
-			}
-		}
 		a {
-			@apply inline-flex items-center text-base py-2 px-4;
-			line-height: 36px;
+			@apply inline-flex items-center text-base py-2 px-4 font-alt hover:text-primary-600;
 		}
 		&.current-menu-item {
 			a {
@@ -44,8 +13,7 @@
 		}
 		&.font-bold {
 			a {
-				font-size: 30px;
-				line-height: 36px;
+				@apply text-2xl;
 			}
 		}
 	}
