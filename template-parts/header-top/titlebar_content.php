@@ -22,7 +22,7 @@
 		<?php if (get_field('link_fur_mitmachen', 'option')): ?>
 		<li class="hidden lg:block">
 			<a
-				class="btn btn-ghost btn-sm"
+				class="btn btn-ghost btn-sm !text-black"
 				href="<?php echo esc_url(get_field('link_fur_mitmachen', 'option')); ?>">
 				<?php pll_e('Mitmachen'); ?>
 			</a>

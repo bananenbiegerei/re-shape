@@ -40,7 +40,7 @@ $args = [
 							<input type="submit" alt="Search" value="Suchen" class="btn btn-sm sr-only" />
 						</form>
 					</div>
-					<button class="btn btn-ghost btn-icon-only" x-on:click="open = ! open"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search','icon-sm') ?></button>
+					<button class="btn btn-ghost btn-icon-only !text-black" x-on:click="open = ! open"><span class="sr-only">Toggle Search Input</span><?php echo bb_icon('search','icon-sm') ?></button>
 				</div>
 			</li>
 		</ul>
