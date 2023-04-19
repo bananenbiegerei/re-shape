@@ -163,18 +163,21 @@ module.exports = {
 			},
 			themes: [
 				{
-					name: 'orga-scheme',
+					name: 'wmde-scheme',
 					extend: {
 						colors: {
-							red: {
-								DEFAULT: '#FA4A28',
-							},
-							cyan: {
-								DEFAULT: '#00B9FF',
-							},
-							blue: {
-								DEFAULT: '#3A25FF',
-								200: '#EEEAFF',
+							primary: {
+								50: '#e5eeff',
+								100: '#cfe0ff',
+								200: '#a9c3ff',
+								300: '#7599ff',
+								400: '#3f5dff',
+								500: '#1423ff',
+								600: '#0008ff',
+								700: '#0009ff',
+								800: '#0008e3',
+								900: '#000094',
+								DEFAULT: '#000068',
 							},
 						},
 					},

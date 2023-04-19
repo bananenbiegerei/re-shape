@@ -1,6 +1,6 @@
 </main>
 
-<footer class="bg-white text-primary mt-36" aria-labelledby="footer-heading">
+<footer class="bg-white wmde-scheme text-primary mt-36" aria-labelledby="footer-heading">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="border-t-2 border-b border-b-gray-200 py-8 mb-12 lg:mb-0">
 		<div class="container lg:flex lg:gap-20">
