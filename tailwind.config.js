@@ -69,7 +69,7 @@ module.exports = {
 					// Create color schemes here: https://uicolors.app/create
 					colors: {					
 						primary: {
-							50: '#fff7ed',
+							50: '#ecebc9',
 							100: '#feedd6',
 							200: '#fcd6ac',
 							300: '#fab977',

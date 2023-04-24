@@ -6,6 +6,9 @@
 		<div class="container lg:flex lg:gap-20">
 			<div class="flex-none">
 				<?php get_template_part("template-parts/social-media-menu"); ?>
+				<div class="mt-5">
+					<?php echo do_shortcode('[wt_cli_manage_consent]'); ?>
+				</div>
 			</div>
 			<div  class="flex-none">
 				<?php //get_template_part("template-parts/newsletter-signup-form-minimal"); ?>
