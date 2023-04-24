@@ -32,6 +32,7 @@ require_once get_template_directory() . '/functions/icons.php';
 // Custom posts and taxonomies
 require_once get_template_directory() . '/functions/custom-posts.php';
 // require_once get_template_directory() . '/functions/custom-taxonomies.php';
+// require_once get_template_directory() . '/functions/custom-search.php';
 
 // Excerpts
 require_once get_template_directory() . '/functions/excerpts.php';

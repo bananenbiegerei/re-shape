@@ -1,21 +1,7 @@
 <?php
-
 add_action(
 	'init',
 	function () {
-
-		register_post_type('team', [
-			'labels' => [
-				'name' => __('Team Members', BB_TEXT_DOMAIN),
-				'singular_name' => __('Team Member', BB_TEXT_DOMAIN),
-			],
-			'public' => true,
-			'has_archive' => true,
-			'supports' => ['title', 'thumbnail'],
-			'show_in_rest' => true,
-			'menu_icon' => 'dashicons-groups',
-		]);
-
 		register_post_type('glossary', [
 			'description' => __('Custom Post Type für Glossareinträge', BB_TEXT_DOMAIN),
 			'labels' => [
@@ -25,7 +11,7 @@ add_action(
 			'supports' => ['title', 'custom-fields'],
 			'taxonomies' => [],
 			'hierarchical' => false,
-			'public' => false,
+			'public' => true,
 			'show_ui' => true,
 			'show_in_menu' => true,
 			'menu_position' => 5,
@@ -34,7 +20,7 @@ add_action(
 			'show_in_nav_menus' => true,
 			'can_export' => true,
 			'has_archive' => true,
-			'exclude_from_search' => true,
+			'exclude_from_search' => false,
 			'publicly_queryable' => true,
 			'capability_type' => 'post',
 			'rewrite' => ['slug' => 'glossar'],
