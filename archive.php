@@ -20,7 +20,7 @@
 						$text = get_field('glossary_description');
 						$output = apply_filters('the_content', $text);						
 					?>
-						<dt id="<?php echo $slug; ?>" class="col-span-12 lg:col-span-4 lg:col-start-2 text-2xl mb-5 font-alt" <?php if($text): echo 'data-info-text="' . wp_strip_all_tags($text) . '"'; endif;?>><?php the_title(); ?></dt>
+						<dt id="<?php echo $slug; ?>" class="col-span-12 lg:col-span-4 lg:col-start-2 text-2xl mb-5 font-alt scroll-mt-10" style="scroll-margin-top: 100px;" <?php if($text): echo 'data-info-text="' . wp_strip_all_tags($text) . '"'; endif;?>><?php the_title(); ?></dt>
 						<dd class="col-span-12 lg:col-span-6 text-xl mb-5">
 							<?php
 							
