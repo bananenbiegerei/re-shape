@@ -3,10 +3,10 @@ $image = get_field('page_header_image');
 $text = get_field('page_header_text');
 $output = apply_filters('the_content', $text);
 if (is_page() || is_404() || is_archive()): ?>
-  <header class="page-header bg-primary rounded-b-3xl pt-2 pb-2 mb-10">
-    <div class="grid grid-cols-12 container">
-      <?php
-      get_template_part('template-parts/breadcrumbs');
+<header class="page-header bg-primary rounded-b-3xl pt-2 pb-2 mb-10">
+  <div class="grid grid-cols-12 container">
+    <?php
+      //get_template_part('template-parts/breadcrumbs');
       if ($image):
       	echo '<div class="col-span-12 lg:col-span-6 pb-10 pt-10">' . wp_get_attachment_image($image, $size) . '</div>';
       	if ($text):
@@ -23,7 +23,7 @@ if (is_page() || is_404() || is_archive()): ?>
       	endif;
       	echo '</div>';
       endif;
-	?>
-    </div>
-  </header>
+	    ?>
+  </div>
+</header>
 <?php endif; ?>

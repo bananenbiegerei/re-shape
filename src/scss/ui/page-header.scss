@@ -1,9 +1,9 @@
 body.home header.page-header {
   h1, p {
-    @apply font-bold;    
+    @apply font-bold max-w-5xl;    
   }
   h1 {
-    @apply lg:text-6xl;
+    @apply lg:text-6xl sr-only;
   }
   p {
     @apply font-alt lg:text-3xl;
