@@ -1,4 +1,5 @@
 <?php
+
 $bgcolor = get_field('style_bg_color_color_light');
 $bgcolor = $bgcolor == 'default' ? '' : $bgcolor;
 if ($bgcolor) {
@@ -11,18 +12,27 @@ if ($color) {
 	$color = "text-{$color}";
 }
 
-$id = str_replace(' ', '_', esc_attr(get_field('anchor_title')));
+//var_dump(get_fields());
+$title = get_field('anchor_title');
+$id = str_replace(' ', '_', esc_attr($title));
 ?>
 
 
-<div id="<?= $id ?>" data-anchor-title="<?= esc_attr(get_field('anchor_title')) ?>" class="bb-headline-block <?= $bgcolor ?>">
-	<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> mb-2 <?= $color ?>">
-		<?php if (get_field('style')['has_bg_color'] ?? false): ?>
-			<span style="background-color: <?= get_field('style')['bg_color'] ?? '' ?>">
-			  <?= get_field('headline') ?>
+<div id="<?= $id ?>" data-anchor-title="<?= $title ?>" class="bb-headline-block">
+
+	<?php if (get_field('headline_link')): ?>
+		<a class="hover:underline transition" href="<?php echo esc_url('headline_link'); ?>">
+			<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> mb-4 <?= $color ?>">
+				<span class="<?= $bgcolor ?>">
+					<?= get_field('headline') ?>
+				</span>
+			</<?= get_field('level') ?>>
+		</a>
+	<?php else: ?>
+		<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> mb-4 <?= $color ?>">
+			<span class="<?= $bgcolor ?>">
+				<?= get_field('headline') ?>
 			</span>
-		<?php else: ?>
-			<?= get_field('headline') ?>
-		<?php endif; ?>
-	</<?= get_field('level') ?>>
+		</<?= get_field('level') ?>>
+	<?php endif; ?>
 </div>
