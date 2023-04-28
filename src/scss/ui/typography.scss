@@ -25,7 +25,9 @@ h5 {
 h6 {
 	@apply text-sm lg:text-base;
 }
-p {
+p,
+ul:not([class]),
+ol:not([class]) {
 	@apply leading-tight text-lg lg:text-xl font-robotonormal mb-2;
 }
 

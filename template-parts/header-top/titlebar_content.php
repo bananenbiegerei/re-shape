@@ -1,8 +1,8 @@
 <div class="flex-1">
-	<a href="<?php echo get_home_url(); ?>" class="hidden lg:block">
+	<a href="https://www.wikimedia.de" class="hidden lg:block">
 		<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/wikimedia-logo.svg" alt="Logo">
 	</a>
-	<a href="<?php echo get_home_url(); ?>" class="block lg:hidden">
+	<a href="https://www.wikimedia.de" class="block lg:hidden">
 		<img class="w-6 h-auto" src="<?php echo get_stylesheet_directory_uri(); ?>/img/wikimedia-logo-mini.svg" alt="Logo">
 	</a>
 </div>
