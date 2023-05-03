@@ -18,18 +18,19 @@ $id = str_replace(' ', '_', esc_attr($title));
 ?>
 
 
-<div id="<?= $id ?>" data-anchor-title="<?= $title ?>" class="bb-headline-block">
-
+<div data-anchor-title="<?= $title ?>" class="bb-headline-block">
+	<div id="<?= $id ?>" class="-translate-y-20">
+	</div>
 	<?php if (get_field('headline_link')): ?>
 		<a class="hover:underline transition" href="<?php echo esc_url('headline_link'); ?>">
-			<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> mb-4 <?= $color ?>">
+			<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> <?= $color ?>">
 				<span class="<?= $bgcolor ?>">
 					<?= get_field('headline') ?>
 				</span>
 			</<?= get_field('level') ?>>
 		</a>
 	<?php else: ?>
-		<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> mb-4 <?= $color ?>">
+		<<?= get_field('level') ?> class="<?= get_field('style')['headline_size'] ?? '' ?> <?= $color ?>">
 			<span class="<?= $bgcolor ?>">
 				<?= get_field('headline') ?>
 			</span>

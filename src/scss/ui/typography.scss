@@ -28,7 +28,11 @@ h6 {
 p,
 ul:not([class]),
 ol:not([class]) {
-	@apply leading-tight text-lg lg:text-xl font-robotonormal mb-2;
+	@apply leading-normal text-lg lg:text-xl font-robotonormal mb-6;
+}
+
+ul:not([class]) {
+	@apply list-disc list-outside pl-5;
 }
 
 p a,
@@ -37,7 +41,7 @@ a.link {
 }
 
 strong {
-	@apply font-bold;
+	@apply font-semibold;
 }
 
 .bb-cta-block,
