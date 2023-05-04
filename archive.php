@@ -3,9 +3,9 @@
 	<main id="main" class="site-main" role="main">
 		<div class="content">
 			<?php if (have_posts()) : ?>
-				<header class="page-header">
+				<div class="page-header">
 					<h1 class="page-title"><?php single_term_title(); ?></h1>
-				</header>
+				</div>
 				<dl class="container grid grid-cols-12">
 					<?php
 					$args = array(

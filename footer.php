@@ -15,13 +15,13 @@
 			</div>
 			<?php if( get_field('kontakt_spendenservice', 'option') ): ?>
 				<div  class="flex-none font-alt">
-					<h6 class="text-base text-primary"><?= _e('Spendenservice', BB_TEXT_DOMAIN) ?></h6>
+					<h3 class="text-base text-primary"><?= _e('Spendenservice', BB_TEXT_DOMAIN) ?></h3>
 					<?php the_field('kontakt_spendenservice', 'option'); ?>
 				</div>
 			<?php endif; ?>
 			<?php if( get_field('kontakt', 'option') ): ?>
 				<div  class="flex-none font-alt">
-					<h6 class="text-base text-primary"><?= _e('Kontakt', BB_TEXT_DOMAIN) ?></h6>
+					<h3 class="text-base text-primary"><?= _e('Kontakt', BB_TEXT_DOMAIN) ?></h3>
 					<?php the_field('kontakt', 'option'); ?>
 				</div>
 			<?php endif; ?>
@@ -37,7 +37,7 @@
 			)); ?>
 		</div>
 		<div class="lg:flex-none py-12 lg:py-0">
-			<h6 class="mb-0 text-base">Wir befreien Wissen</h6>
+			<h3 class="mb-0 text-base">Wir befreien Wissen</h3>
 		</div>
 	</div>
 </footer>

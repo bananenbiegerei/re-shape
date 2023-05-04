@@ -11,16 +11,16 @@ if (is_page() || is_404() || is_archive()): ?>
       if ($image):
       	echo '<div class="col-span-12 lg:col-span-6 pb-10 pt-10">' . wp_get_attachment_image($image, $size) . '</div>';
       	if ($text):
-      		echo '<div class="col-span-12 lg:col-span-6 pb-10 pt-10 flex flex-col	justify-center">' . wp_kses_post($output) . '</div>';
+      		echo '<div class="col-span-12 lg:col-span-6 pb-10 pt-10 flex flex-col	justify-center !text-black">' . wp_kses_post($output) . '</div>';
       	endif;
       else:
         echo '<div class="col-span-12 lg:col-span-10 lg:col-start-2 pt-2 pb-2 lg:pt-10 lg:pb-5">';
       	if (is_archive()):
-      		echo '<h1>Glossar</h1>';
+      		echo '<h1 class="text-black">Glossar</h1>';
       	elseif ($text):
       		echo wp_kses_post($output);
       	else:
-      		echo '<h1>' . get_the_title() . '</h1>';
+      		echo '<h1 class="text-black">' . get_the_title() . '</h1>';
       	endif;
       	echo '</div>';
       endif;

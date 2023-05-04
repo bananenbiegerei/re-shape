@@ -20,7 +20,7 @@ $args = [
 	'theme_location' => 'nav',
 ]; ?>
 <div class="hidden lg:block sticky top-0 z-40 bg-gray border-b">
-	<div class="main-nav container">
+	<nav class="main-nav container"  role="navigation" aria-label="Main">
 		<ul class="menu horizontal">
 			<?php wp_nav_menu($args); ?>
 			<li class="absolute right-0 h-full">
@@ -46,5 +46,5 @@ $args = [
 				</div>
 			</li>
 		</ul>
-	</div>
+	</nav>
 </div>

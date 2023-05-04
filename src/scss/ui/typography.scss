@@ -5,7 +5,17 @@ h3,
 h4,
 h5,
 h6 {
-	@apply font-alt leading-tight mb-2 font-medium text-primary-900;
+	@apply font-alt leading-tight mb-2 font-medium;
+}
+main {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-primary-900;
+	}
 }
 h1 {
 	@apply text-4xl lg:text-5xl;

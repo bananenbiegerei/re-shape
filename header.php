@@ -4,4 +4,14 @@
 <body <?php body_class('flex flex-col min-h-screen'); ?>>
   <?php get_template_part('template-parts/header-top/main'); ?>
   <?php //get_template_part('template-parts/anchor-nav'); ?>
-  <main class="main-content flex-grow pt-12 lg:pt-0">
+  <main class="main-content flex-grow" id="main-content">
+  <?php
+  if (is_front_page()) { ?>
+    <h1 class="sr-only">
+      <?php
+      $site_title = get_bloginfo('name');
+      echo $site_title;
+      ?>
+    </h1>
+  <?php }
+  ?>
