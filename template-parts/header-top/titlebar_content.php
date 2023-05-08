@@ -1,6 +1,6 @@
 <header class="flex items-center w-full">
 	<div class="flex-1">
-		<a href="https://www.wikimedia.de" class="hidden lg:block" aria-labelledby="site-name">
+		<a href="https://www.wikimedia.de" class="hidden lg:inline-block" aria-labelledby="site-name">
 			<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/wikimedia-logo.svg" alt="Logo">
 		</a>
 		<a href="https://www.wikimedia.de" class="block lg:hidden" aria-labelledby="site-name">
