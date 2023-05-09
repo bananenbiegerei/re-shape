@@ -1,6 +1,7 @@
 <?php
 get_header(); ?>
 <div class="container">
+	<?php /*
 	<div class="flex flex-shrink-0 justify-center mb-16">
 	  <a href="/" class="inline-flex">
 		<span class="sr-only">Your Company</span>
@@ -9,13 +10,14 @@ get_header(); ?>
 		</svg>
 	  </a>
 	</div>
+	*/ ?>
 	<div class="text-center">
 		<p>404</p>
-		<h1>Page not found.</h1>
-		<p>Sorry, we couldn’t find the page you’re looking for.</p>
+		<h1><?php _e('Page not found.', BB_TEXT_DOMAIN); ?></h1>
+		<p><?php _e('Sorry, we couldn’t find the page you’re looking for.', BB_TEXT_DOMAIN); ?></p>
 		<div class="mt-6">
 		  <a href="#" class="text-base font-medium text-primary-600 hover:text-primary-500">
-			Go back home
+			<?php _e('Go back home', BB_TEXT_DOMAIN); ?>
 			<span aria-hidden="true"> &rarr;</span>
 		  </a>
 		</div>

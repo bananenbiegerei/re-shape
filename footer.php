@@ -1,7 +1,7 @@
 </main>
 
 <footer class="bg-white wmde-scheme text-primary mt-36" aria-labelledby="footer-heading">
-	<h2 id="footer-heading" class="sr-only">Footer</h2>
+	<h2 id="footer-heading" class="sr-only"><?php _e('Footer', BB_TEXT_DOMAIN); ?></h2>
 	<div class="border-t-2 border-b border-b-gray-200 py-8 mb-12 lg:mb-0">
 		<div class="container lg:flex lg:gap-20">
 			<div class="flex-none">
@@ -37,7 +37,7 @@
 			)); ?>
 		</div>
 		<div class="lg:flex-none py-12 lg:py-0">
-			<h3 class="mb-0 text-base">Wir befreien Wissen</h3>
+			<h3 class="mb-0 text-base"><?php _e('Wir befreien Wissen', BB_TEXT_DOMAIN); ?></h3>
 		</div>
 	</div>
 </footer>

@@ -39,7 +39,7 @@ foreach (get_field('team_members') as $member_id) {
 									<?php endif; ?>
 										<h4 class="text-lg"><?= $member['name'] ?></h4>
 										<p class="margin-bottom-0 text-lg"><?= $member['details'] ?></p>
-										<p class="text-lg"><a href="mailto:<?= $member['email'] ?>">E-mail</a></p>
+										<p class="text-lg"><a href="mailto:<?= $member['email'] ?>"><?php _e('E-Mail', BB_TEXT_DOMAIN); ?></a></p>
 								</div>
 							</div>
 				<?php endforeach; ?>
