@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WMDE re:shape Theme\n"
+"POT-Creation-Date: 2023-05-09 16:24+0200\n"
+"PO-Revision-Date: 2023-05-09 16:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: 404.php:16
+msgid "Seite nicht gefunden."
+msgstr "Page not found."
+
+#: 404.php:17
+msgid "Leider konnten wir die von Ihnen gesuchte Seite nicht finden."
+msgstr "Sorry, we couldn’t find the page you’re looking for."
+
+#: 404.php:20
+msgid "Zurück zur Startseite"
+msgstr "Go back home"
+
+#: blocks/card/card.php:13
+msgid "Missing Link!"
+msgstr ""
+
+#: blocks/card/card.php:120
+msgid "Missing Link Title!"
+msgstr ""
+
+#: blocks/newsletter/newsletter.php:22
+msgid "Register"
+msgstr ""
+
+#: blocks/team-members/team-members.php:42
+msgid "E-Mail"
+msgstr ""
+
+#: blocks/wikimedia-commons-media/wikimedia-commons-media.php:21
+msgid "Error: Unsupported or missing media"
+msgstr ""
+
+#: footer.php:4 functions/menu.php:7
+msgid "Footer"
+msgstr "Footer"
+
+#: footer.php:18
+msgid "Spendenservice"
+msgstr "Donation service"
+
+#: footer.php:24
+msgid "Kontakt"
+msgstr "Contact"
+
+#: footer.php:40
+msgid "Wir befreien Wissen"
+msgstr ""
+
+#: functions/acf-blocks.php:43
+msgid "Custom Blocks"
+msgstr ""
+
+#: functions/custom-posts.php:6
+msgid "Custom Post Type für Glossareinträge"
+msgstr ""
+
+#: functions/custom-posts.php:8
+msgctxt "Post Type General Name"
+msgid "Glossareinträge"
+msgstr ""
+
+#: functions/custom-posts.php:9
+msgctxt "Post Type Singular Name"
+msgid "Glossareintrag"
+msgstr ""
+
+#: functions/custom-taxonomies.php:4
+msgid "Project Types"
+msgstr ""
+
+#: functions/custom-taxonomies.php:5
+msgid "Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:6
+msgid "All Project Types"
+msgstr ""
+
+#: functions/custom-taxonomies.php:7
+msgid "Edit Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:8
+msgid "View Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:9
+msgid "Update Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:10
+msgid "Add New Project Type"
+msgstr ""
+
+#: functions/custom-taxonomies.php:11
+msgid "New Project Type Name"
+msgstr ""
+
+#: functions/custom-taxonomies.php:27
+msgid "Categories"
+msgstr ""
+
+#: functions/custom-taxonomies.php:28
+msgid "Category"
+msgstr ""
+
+#: functions/custom-taxonomies.php:47
+msgid "Formats"
+msgstr ""
+
+#: functions/custom-taxonomies.php:48
+msgid "Format"
+msgstr ""
+
+#: functions/custom-taxonomies.php:68
+msgid "Thema"
+msgstr ""
+
+#: functions/custom-taxonomies.php:69
+msgid "Themen"
+msgstr ""
+
+#: search.php:5
+#, php-format
+msgid "Suchergebnisse für: %s"
+msgstr ""
+
+#: search.php:38
+msgid "Nichts gefunden"
+msgstr ""
+
+#: search.php:39
+msgid ""
+"Es tut uns leid, aber nichts passte zu Ihren Suchbegriffen. Bitte versuchen "
+"Sie es noch einmal mit anderen Suchbegriffen."
+msgstr ""
+
+#: template-parts/breadcrumbs.php:25
+msgid "Projects"
+msgstr ""
+
+#: template-parts/header-top/desktop/page-header.php:20
+msgid "Glossar"
+msgstr "Glossary"
+
+#: template-parts/header-top/main.php:9
+msgid "Skip to main content"
+msgstr ""
+
+#: template-parts/header-top/mobile/titlebar.php:28
+msgid "Menu"
+msgstr ""
+
+#: template-parts/header-top/titlebar_content.php:19
+msgid "Spenden"
+msgstr "Donations"
+
+#: template-parts/header-top/titlebar_content.php:28
+msgid "Mitmachen"
+msgstr ""
+
+#: template-parts/newsletter-signup-form-minimal.php:2
+msgid "Newlsetter Anmeldung"
+msgstr ""
+
+#: template-parts/newsletter-signup-form-minimal.php:7
+#: template-parts/newsletter-signup-form-minimal.php:13
+msgid "E-Mail:"
+msgstr "E-mail:"
+
+#: template-parts/newsletter-signup-form-minimal.php:17
+msgid "Anmelden"
+msgstr "Login"
+
+#: template-parts/newsletter-signup-form-minimal.php:27
+#: template-parts/newsletter-signup-form-minimal.php:40
+msgid "DSGVO Hinweis"
+msgstr "GDPA Notice"
+
+#: template-parts/newsletter-signup-form-minimal.php:43
+msgid ""
+"Indem ich meine E-Mail-Adresse eintrage, erkläre ich mich damit "
+"einverstanden, dass Wikimedia mich aufgrund meiner Einwilligung (Art. 6 Abs. "
+"1 lit. a) DSGVO) per E-Mail bis auf Widerruf über Aktuelles informiert und "
+"die hierzu erforderlichen Datenverarbeitungen vornimmt. Ich kann meine "
+"Einwilligung jederzeit mit Wirkung für die Zukunft gegenüber Wikimedia "
+"widerrufen.\n"
+"                    Nähere Informationen zur Datenverarbeitung bei Wikimedia "
+"und zu meinen Rechten finde ich unter <a href=\"https://www.wikimedia.de/"
+"datenschutz/\">www.wikimedia.de/datenschutz/</a>."
+msgstr ""
+
+#: template-parts/newsletter-signup-form-minimal.php:49
+msgid "Close"
+msgstr ""
+
+#: template-parts/social-media-menu.php:1
+msgid "Wikimedia folgen"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "WMDE re:shape Theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://bananenbiegerei.de/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bananenbiegerei"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://bananenbiegerei.de"
+msgstr ""

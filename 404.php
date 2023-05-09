@@ -13,11 +13,11 @@ get_header(); ?>
 	*/ ?>
 	<div class="text-center">
 		<p>404</p>
-		<h1><?php _e('Page not found.', BB_TEXT_DOMAIN); ?></h1>
-		<p><?php _e('Sorry, we couldn’t find the page you’re looking for.', BB_TEXT_DOMAIN); ?></p>
+		<h1><?php _e('Seite nicht gefunden.', BB_TEXT_DOMAIN); ?></h1>
+		<p><?php _e('Leider konnten wir die von Ihnen gesuchte Seite nicht finden.', BB_TEXT_DOMAIN); ?></p>
 		<div class="mt-6">
 		  <a href="#" class="text-base font-medium text-primary-600 hover:text-primary-500">
-			<?php _e('Go back home', BB_TEXT_DOMAIN); ?>
+			<?php _e('Zurück zur Startseite', BB_TEXT_DOMAIN); ?>
 			<span aria-hidden="true"> &rarr;</span>
 		  </a>
 		</div>
