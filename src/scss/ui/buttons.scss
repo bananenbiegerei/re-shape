@@ -25,7 +25,7 @@
 
 // Outline
 .btn-hollow {
-	@apply bg-white text-primary-700 border border-primary-700 hover:border-gray-800 hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-0;
+	@apply bg-white text-primary border border-primary hover:border-gray-800 hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-0;
 }
 
 // Ghost
