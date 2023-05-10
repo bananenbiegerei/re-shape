@@ -16,7 +16,9 @@ if (is_page() || is_404() || is_archive()): ?>
       else:
         echo '<div class="col-span-12 lg:col-span-10 lg:col-start-2 pt-2 pb-2 lg:pt-10 lg:pb-5">';
       	if (is_archive()):
-      		echo '<h1 class="text-black">Glossar</h1>';
+      		echo '<h1 class="text-black">';
+					_e('Glossar', BB_TEXT_DOMAIN);
+					echo '</h1>';
       	elseif ($text):
       		echo wp_kses_post($output);
       	else:
