@@ -4,7 +4,7 @@ $text = get_field('page_header_text');
 $output = apply_filters('the_content', $text);
 if (is_page() || is_404() || is_archive()): ?>
 <header class="page-header bg-primary rounded-b-3xl pt-2 pb-2 mb-10">
-  <div class="grid grid-cols-12 container">
+  <div class="grid grid-cols-12 container gap-10">
     
     <?php
       //get_template_part('template-parts/breadcrumbs');
