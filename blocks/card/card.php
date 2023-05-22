@@ -1,16 +1,14 @@
 <?php
 
-// FIXME: re-implement excerpt and add option to show excerpt
-
 /* ACF BLOCK: Card
  * Notes:
- * - Title, excerpt, image, and theme & format will be fetched for link to a post that is on any subsite of the same network instance
- * - If there are issues with links, try refreshing permalinks on that subsite
+ * - Title, excerpt, image, and theme & format will be fetched for link to a post that is on any sub-site of the same
+ *   network instance. Check `functions.php`.
+ * - This block render template is also used by `blocks/latest-posts`.
  */
 
 // Get link from ACF or show an error
-// FIXME: this is way to obscure...
-$link = get_field('content')['link'] ?? false ? get_field('content')['link'] ?? false : ['title' => __('Missing Link!', BB_TEXT_DOMAIN), 'url' => '#'];
+$link = get_field('content')['link'] ?? false ?: ['title' => __('Missing Link!', BB_TEXT_DOMAIN), 'url' => '#'];
 
 // Set default values
 $blog_id = get_current_blog_id();
@@ -26,7 +24,7 @@ $alt_image_id = false;
 if ($post_data = bbCard::get_post_data_from_url($link['url'])) {
 	// If card is loaded from the Card ACF block, see if there's a post with this URL
 	// Use the title from the post if it has not been manually set
-	$link['title'] = $link['title'] != '' ? $link['title'] : $post_data['title'];
+	$link['title'] = $link['title'] != '' ?: $post_data['title'];
 	// Get other values from post
 	$post_id = $post_data['post_id'];
 	$blog_id = $post_data['blog_id'];
@@ -53,34 +51,35 @@ if ($post_data = bbCard::get_post_data_from_url($link['url'])) {
 
 // Override values if alt. versions are provided
 if (get_field('content')['alt_details'] ?? false) {
+	$excerpt = get_field('content')['excerpt'] ?: $excerpt;
 	$alt_image_id = get_field('content')['image'];
 	$alt_theme = array_map(
 		function ($a) {
 			return $a->name;
 		},
-		get_field('content')['theme'] ? get_field('content')['theme'] : [],
+		get_field('content')['theme'] ?: [],
 	);
 	$theme = $alt_theme ? $alt_theme : $theme;
 	$alt_format = array_map(
 		function ($a) {
 			return $a->name;
 		},
-		get_field('content')['format'] ? get_field('content')['format'] : [],
+		get_field('content')['format'] ?: [],
 	);
-	$format = $alt_format ? $alt_format : $format;
+	$format = $alt_format ?: $format;
 }
 
 // Set featured image
 $featured_image = null;
 if ($post_type == 'projects' && !$alt_image_id && ($image_id = get_post_thumbnail_id($post_id))) {
 	// If it's a project w/o an alt. image
-	$featured_image = wp_get_attachment_image($image_id, 'full', false, ['class' => 'p-1 w-auto max-h-32']);
+	$featured_image = wp_get_attachment_image($image_id, 'full', false, ['class' => 'p-5 w-auto max-h-32 rounded-2xl']);
 } elseif ($alt_image_id) {
 	// If there's an alt. image, use it
-	$featured_image = wp_get_attachment_image($alt_image_id, 'full', false, ['class' => 'object-cover w-full h-full']);
+	$featured_image = wp_get_attachment_image($alt_image_id, 'full', false, ['class' => 'object-cover w-full h-full rounded-2xl']);
 } else {
 	// Otherwise get the featured image of the post
-	$featured_image = bbCard::get_multisite_featured_image($blog_id, $post_id, 'full', ['class' => 'object-cover w-full h-full'], $placeholder);
+	$featured_image = bbCard::get_multisite_featured_image($blog_id, $post_id, 'full', ['class' => 'object-cover w-full h-full rounded-2xl'], $placeholder);
 }
 
 // Configure layout classes
@@ -92,13 +91,13 @@ if ($layout == 'v' || $layout == 'vne') {
 	$layout_classes['image'] = '';
 	$layout_classes['content'] = '';
 } elseif ($layout == 'h' || $layout == 'hwe' || $layout == 'hwexl') {
-	$layout_classes['container'] = 'flex-row';
-	$layout_classes['image'] = 'basis-1/2';
-	$layout_classes['content'] = 'basis-1/2 self-center';
+	$layout_classes['container'] = 'flex-col lg:flex-row';
+	$layout_classes['image'] = 'lg:basis-1/2';
+	$layout_classes['content'] = 'lg:basis-1/2 lg:self-center';
 } elseif ($layout == 'h2' || $layout == 'h2we') {
-	$layout_classes['container'] = 'flex-row';
-	$layout_classes['image'] = 'basis-1/3';
-	$layout_classes['content'] = 'basis-2/3';
+	$layout_classes['container'] = 'flex-col lg:flex-row';
+	$layout_classes['image'] = 'basis-full lg:basis-1/3';
+	$layout_classes['content'] = 'basis-full lg:basis-2/3';
 }
 
 // Add background color and padding
@@ -121,20 +120,23 @@ if ($link['title'] == '') {
 }
 ?>
 
-<div class="bb-card-block rounded-3xl mb-10 lg:mb-5 z-10 relative <?= $bgcolor ?>" data-post-id="<?= $post_id ?>" data-blog-id="<?= $blog_id ?>" style="<?= $bgcolor_style ?>">
-	<a href="<?= $link['url'] ?>" class="flex gap-5 <?= $layout_classes['container'] ?>">
+<div class="bb-card-block mb-5 lg:mb-10 z-10 relative <?= $bgcolor ?>" data-post-id="<?= $post_id ?>" data-blog-id="<?= $blog_id ?>" style="<?= $bgcolor_style ?>">
+
+	<?php if (!is_admin()): ?>
+	<a href="<?= $link['url'] ?>" class="flex gap-5 <?= $layout_classes['container'] ?> text-hover-effect image-hover-effect">
+	<?php endif; ?>
 
 		<?php if ($post_type == 'projects' && $featured_image && !$alt_image_id): ?>
 			<div class="<?= $layout_classes['image'] ?>">
-				<div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-xl">
-				<div class="w-full h-full flex items-center justify-center p-5">
+				<div class="aspect-w-16 aspect-h-9">
+				<div class="flex items-center justify-center">
 					<?= $featured_image ?>
 				</div>
 				</div>
 			</div>
 		<?php elseif ($featured_image): ?>
 			<div class="<?= $layout_classes['image'] ?>">
-				<div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-2xl overflow-hidden">
+				<div class="aspect-w-16 aspect-h-9">
 					<?= $featured_image ?>
 				</div>
 			</div>
@@ -143,24 +145,26 @@ if ($link['title'] == '') {
 		<div class="<?= $layout_classes['content'] ?> space-y-2 px-2 pb-2 card-content">
 
 			<?php if ($theme || $format): ?>
-				<div class="uppercase text-primary font-bold text-xs font-alt">
+				<div class="topline">
 					<?= strip_tags(join(', ', $theme)) ?>
 					<?= $theme && $format ? ' | ' : '' ?>
 					<?= strip_tags(join(', ', $format)) ?>
 				</div>
 			<?php endif; ?>
 
-			<h2 class="text-2xl font-alt">
+			<h2 class="<?= $layout == 'hwexl' ? 'text-base lg:text-3xl' : 'text-base lg:text-2xl' ?> font-alt">
 				<?= htmlspecialchars_decode(strip_tags($link['title'])) ?>
 			</h2>
 
 			<?php if (in_array($layout, ['v', 'hwe', 'hwexl', 'h2we'])): ?>
-				<p class="<?= $layout == 'hwexl' ? 'text-3xl' : 'text-xl' ?> font-alt font-normal line-clamp-3">
-					<?= wp_trim_words($excerpt, 99, '...') ?>
+				<p class="<?= $layout == 'hwexl' ? 'text-sm lg:text-xl' : 'text-sm lg:text-xl' ?> font-normal line-clamp-3">
+					<?= $excerpt ?>
 				</p>
 			<?php endif; ?>
 
 		</div>
 
+	<?php if (!is_admin()): ?>
 	</a>
+	<?php endif; ?>
 </div>

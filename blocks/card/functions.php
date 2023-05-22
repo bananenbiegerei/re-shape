@@ -1,6 +1,14 @@
 <?php
 
-define('WKC_FEATURED_IMAGE', -1);
+/* Notes:
+ * - Lookup of URL to post data is cached to reduce load. Cache entries are not used & updated in Gutenberg editor
+ *   (see `get_post_data_from_url()`).
+ * - `url_to_postid()` has a bug that will mess up rewrite rules on multisite instances if for some reason the rules
+ *   are empty. This is prevented with a little workaround (see below).
+ */
+
+define('BB_CARD_URL_TO_ID_PREFIX', 'bb_card_');
+define('BB_CARD_URL_TO_ID_TIMEOUT', 72 * HOUR_IN_SECONDS);
 
 class bbCard
 {
@@ -34,11 +42,11 @@ class bbCard
 
 		$sites = [];
 		$sites[get_current_blog_id()] = null; // FIXME: why?
-		foreach ($wpdb->get_results("SELECT blog_id,domain,path FROM {$wpdb->prefix}blogs;", ARRAY_A) as $site) {
+		foreach ($wpdb->get_results("SELECT blog_id,domain,path FROM {$wpdb->base_prefix}blogs;", ARRAY_A) as $site) {
 			if ($site['blog_id'] == '1') {
-				$table = "{$wpdb->prefix}options";
+				$table = "{$wpdb->base_prefix}options";
 			} else {
-				$table = "{$wpdb->prefix}{$site['blog_id']}_options";
+				$table = "{$wpdb->base_prefix}{$site['blog_id']}_options";
 			}
 
 			$site['title'] = $wpdb->get_var("SELECT option_value FROM {$table} WHERE option_name='blogname';");
@@ -71,9 +79,20 @@ class bbCard
 	// Find a matching post in any of the network sites from its URL
 	static function get_post_data_from_url($url)
 	{
+		$md5 = md5($url);
+		$cached = get_transient(BB_CARD_URL_TO_ID_PREFIX . $md5);
+		// Cache is only used for end users
+		if ($cached && !is_admin()) {
+			return $cached;
+		}
+
 		if (!is_multisite()) {
 			$post_data = bbCard::get_post_data_from_url_for_blog($url);
+			if (!$post_data) {
+				return false;
+			}
 			$post_data['blog_id'] = 1;
+			set_transient(BB_CARD_URL_TO_ID_PREFIX . $md5, $post_data, BB_CARD_URL_TO_ID_TIMEOUT);
 			return $post_data;
 		}
 
@@ -89,12 +108,27 @@ class bbCard
 				restore_current_blog();
 			}
 		}
+
+		set_transient(BB_CARD_URL_TO_ID_PREFIX . $md5, $post_data, BB_CARD_URL_TO_ID_TIMEOUT);
 		return $post_data;
 	}
 
 	// Get the matching post in a subsite from its URL
 	static function get_post_data_from_url_for_blog($url)
 	{
+		// NOTE: If the rewrite rules for that blog are empty the wrong rewrite rules will be created when bbCard::url_to_postid() is called. We prevent that by asking the user to click on the link themselves which will create the right rules...
+		if (bbCard::checkRW() == 0) {
+			error_log("BB_CARD_ERROR: rewrite rules empty ({$url})");
+			return [
+				'post_id' => -1,
+				'title' => 'Permalink Error',
+				'excerpt' => 'Please first access the URL',
+				'post_type' => 'post',
+				'format' => [],
+				'theme' => [],
+			];
+		}
+
 		if ($post_id = bbCard::url_to_postid($url)) {
 			$post = get_post($post_id);
 			$theme = [];
@@ -112,7 +146,6 @@ class bbCard
 				'post_id' => $post_id,
 				'title' => $post->post_title,
 				'excerpt' => $post->post_excerpt,
-				// 'image_id' => get_field('wkc_featured_image_url', $post_id) ? WKC_FEATURED_IMAGE : get_post_thumbnail_id($post_id),
 				'post_type' => get_post_type($post_id),
 				'format' => $format,
 				'theme' => $theme,
@@ -156,7 +189,6 @@ class bbCard
 			'title' => $post->post_title,
 			'url' => $url,
 			'excerpt' => $post->post_excerpt,
-			// 'image_id' => $image_id,
 			'post_type' => $post_type,
 			'format' => $format,
 			'theme' => $theme,
@@ -172,9 +204,10 @@ class bbCard
 
 		$wkc_image_url = get_field('wkc_featured_image_url', $post_id);
 		if ($wkc_image_url && class_exists('bbWikimediaCommonsMedia')) {
-			$data = bbWikimediaCommonsMedia::get_media($wkc_image_url);
-			$img = "<img src=\"{$data['media_url']}\" alt=\"{$data['desc']}\" class=\" {$attr['class']}\" decoding=\"async\" srcset=\"{$data['srcset']}\">";
-			return $img;
+			if ($data = bbWikimediaCommonsMedia::get_media($wkc_image_url)) {
+				$img = "<img src=\"{$data['media_url']}\" alt=\"{$data['desc']}\" class=\" {$attr['class']}\" decoding=\"async\" srcset=\"{$data['srcset']}\">";
+				return $img;
+			}
 		}
 
 		$image_id = get_post_thumbnail_id($post_id);
@@ -191,10 +224,19 @@ class bbCard
 		return $img;
 	}
 
+	static function checkRW()
+	{
+		global $wpdb;
+		$table = $wpdb->prefix . 'options';
+		$rw = $wpdb->get_var("SELECT `option_value` FROM {$table} WHERE `option_name` = 'rewrite_rules'");
+		return strlen($rw);
+	}
+
 	// This is a rewrite of url_to_postid with support for custom post types and with a fix/hack for posts with a parent page
 	static function url_to_postid($url)
 	{
 		global $wp_rewrite;
+		$wp_rewrite->init();
 		$url = apply_filters('url_to_postid', $url);
 		$url_host = parse_url($url, PHP_URL_HOST);
 		if (is_string($url_host)) {
@@ -323,10 +365,14 @@ class bbCard
 				} else {
 					// If the post is still not found, search with the last past of the post path
 					// NOTE: not sure why WP has trouble finding a post that has a parent slug... had the issue with abc_posts
-					$query['name'] = array_pop(explode('/', $query['name']));
-					$wpquery = new WP_Query($query);
-					if (!empty($wpquery->posts) && $wpquery->is_singular) {
-						return $wpquery->post->ID;
+					// FIXME: Only variables should be passed by reference ???
+					if (isset($query['name'])) {
+						$expl = explode('/', $query['name']);
+						$query['name'] = array_pop($expl);
+						$wpquery = new WP_Query($query);
+						if (!empty($wpquery->posts) && $wpquery->is_singular) {
+							return $wpquery->post->ID;
+						}
 					}
 					return 0;
 				}
