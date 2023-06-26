@@ -2,7 +2,17 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
 	content: ['./**/*.php'],
-	safelist: ['grid', { pattern: /text-*/ }, { pattern: /lg:text-*/ }, { pattern: /justify-*/ }, { pattern: /bg-*/ }],
+	safelist: [
+		{
+			pattern: /(sm:|md:|lg:|)justify-*/,
+		},
+		{
+			pattern: /text-(xs|sm|lg|xl)/,
+		},
+		{
+			pattern: /(text|bg)-(black|white|primary|gray|gray-700|primary-50|primary-600|red|red-50|green-50|green-700|neon|neon-800)/,
+		},
+	],
 	theme: {
 		// Helper pixel to rem calc: https://nekocalc.com/de/px-zu-rem-umrechner
 		fontSize: {
@@ -68,7 +78,7 @@ module.exports = {
 				extend: {
 					// colors is used here for demonstration purposes <--- ????
 					// Create color schemes here: https://uicolors.app/create
-					colors: {					
+					colors: {
 						primary: {
 							50: '#ecebc9',
 							100: '#feedd6',
@@ -80,7 +90,7 @@ module.exports = {
 							700: '#be4210',
 							800: '#973415',
 							900: '#6C3014',
-							950: '#421508',							
+							950: '#421508',
 							DEFAULT: '#F46E14',
 						},
 						secondary: {
@@ -107,7 +117,7 @@ module.exports = {
 							700: '#be4210',
 							800: '#973415',
 							900: '#6C3014',
-							950: '#421508',							
+							950: '#421508',
 							DEFAULT: '#F46E14',
 						},
 						red: {
