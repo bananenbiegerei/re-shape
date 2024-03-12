@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-index.php
+front-end.php
 <?php get_footer();

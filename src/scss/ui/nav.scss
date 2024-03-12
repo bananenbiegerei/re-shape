@@ -1,26 +1,16 @@
 .menu {
 	&.horizontal {
-		@apply flex gap-x-6 items-baseline flex-wrap;
+		@apply lg:flex gap-x-4 items-baseline flex-wrap;
 	}
 	li {
+		@apply text-center lg:text-left;
 		a {
-			@apply inline-flex items-center text-xl py-1 px-2 hover:underline hover:underline-offset-2 rounded transition font-sans font-normal;
+			@apply text-4xl lg:text-base font-alt font-medium;
 		}
 		&.current-menu-item {
 			a {
 				@apply underline underline-offset-2;
 			}
 		}
-	}
-	&.dropdown {
-		@apply flex flex-col space-y-2;
-		li {
-			a {
-				@apply w-full text-base py-1 px-2 hover:bg-primary-50 rounded transition;
-			}
-		}
-	}
-	.dropdown-toggle {
-		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
 	}
 }

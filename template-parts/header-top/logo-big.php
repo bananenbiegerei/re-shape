@@ -1,9 +1,9 @@
 <?php if ($logo_big): ?>
-<a href="<?php echo home_url(); ?>" class="hidden lg:inline-block" aria-labelledby="site-name">
+<a href="<?php echo home_url(); ?>" class="hidden lg:block" aria-labelledby="site-name">
     <?php
     $attachment_id = $logo_big;
     $size = 'full'; // (thumbnail, medium, large, full or custom size)
-    echo wp_get_attachment_image($attachment_id, $size, false, ['class' => 'h-16 w-auto lg:block hidden']);
+    echo wp_get_attachment_image($attachment_id, $size, false, ['class' => 'h-16 w-auto lg:block hidden m-4']);
     ?>
 </a>
 <?php else: ?>

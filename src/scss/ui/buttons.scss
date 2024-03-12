@@ -99,7 +99,7 @@
 
 	/* Menu */
 	&-menu {
-		@apply inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent py-3 text-left font-alt text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
+		@apply inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent py-3 px-0 text-left font-alt text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
 
 		&.current {
 			@apply text-primary-500;
@@ -181,10 +181,10 @@
 
 	/* btn variants */
 	&-ghost {
-		@apply border border-transparent bg-transparent text-current shadow-none outline-current hover:border-opacity-0 hover:bg-primary-200 hover:bg-opacity-20;
+		@apply border border-transparent bg-transparent text-current shadow-none outline-current hover:border-opacity-0 hover:bg-primary-200 hover:bg-opacity-0;
 
 		&.btn-active {
-			@apply border-opacity-0 bg-primary-600 bg-opacity-20;
+			@apply border-opacity-0 bg-primary-600 bg-opacity-0;
 		}
 
 		&.btn-secondary {
