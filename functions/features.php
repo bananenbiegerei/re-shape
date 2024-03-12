@@ -63,3 +63,11 @@ add_action(
 	},
 	11,
 );
+
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes($mimes = [])
+{
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}

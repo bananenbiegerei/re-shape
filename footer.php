@@ -23,12 +23,22 @@
     </div>
     <div class="container lg:flex lg:items-center lg:h-24">
         <div class="lg:flex-1">
-            <?php wp_nav_menu([
+            <?php $footer_args = [
             	'container' => 'nav',
             	'menu' => 'footer',
             	'menu_class' => 'flex flex-col lg:flex-row gap-5',
             	'theme_location' => 'footer',
-            ]); ?>
+            ]; ?>
+            <?php if (has_nav_menu('footer')): ?>
+            <?php wp_nav_menu($footer_args); ?>
+            <?php else: ?>
+            <div class="border-2 my-2 border-error border-dotted rounded-2xl p-4">
+                <h2>
+                    <?php _e('No menu assigned!', BB_TEXT_DOMAIN); ?>
+                </h2> <a class="btn btn-error"
+                    href="<?php echo admin_url('nav-menus.php'); ?>"><?php _e('Edit Menus', BB_TEXT_DOMAIN); ?></a>
+            </div>
+            <?php endif; ?>
         </div>
         <div class="lg:flex-none py-12 lg:py-0">
             <h3 class="mb-0 text-base"><?php _e('Wir befreien Wissen', BB_TEXT_DOMAIN); ?></h3>

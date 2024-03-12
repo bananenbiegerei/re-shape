@@ -132,6 +132,7 @@ the theme to the server:
 
 # Users Manual
 - copy the theme folder to your theme directory
+- notwendige plugins installieren
 - go to your backend and activate the theme
 - Add menus
   - Header

@@ -86,7 +86,7 @@
 
 	/* default btn */
 	& {
-		@apply border-primary bg-primary text-white no-underline outline-primary-700 hover:border-primary-500 hover:bg-primary-500;
+		@apply border-primary bg-primary text-black no-underline outline-primary-700 hover:border-primary-500 hover:bg-primary-500;
 
 		&.btn-active {
 			@apply border-primary-500 bg-primary-500;
@@ -99,7 +99,7 @@
 
 	/* Menu */
 	&-menu {
-		@apply inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent p-3 text-left font-alt text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
+		@apply inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent py-3 text-left font-alt text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
 
 		&.current {
 			@apply text-primary-500;
@@ -188,7 +188,7 @@
 		}
 
 		&.btn-secondary {
-			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-white;
+			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-black;
 
 			&.btn-active {
 				@apply border-secondary-600 bg-secondary-600 text-secondary-700;
@@ -205,7 +205,7 @@
 		}
 
 		&.btn-success {
-			@apply text-success hover:border-success hover:bg-success hover:text-white;
+			@apply text-success hover:border-success hover:bg-success hover:text-black;
 
 			&.btn-active {
 				@apply border-success bg-success text-white;
@@ -213,7 +213,7 @@
 		}
 
 		&.btn-warning {
-			@apply text-warning hover:border-warning hover:bg-warning hover:text-white;
+			@apply text-warning hover:border-warning hover:bg-warning hover:text-black;
 
 			&.btn-active {
 				@apply border-warning bg-warning text-white;
@@ -222,7 +222,7 @@
 
 		&.btn-error,
 		&.btn-error {
-			@apply text-error hover:border-error hover:bg-error hover:text-white;
+			@apply text-error hover:border-error hover:bg-error hover:text-black;
 
 			&.btn-active {
 				@apply border-error bg-error text-white;
@@ -246,14 +246,14 @@
 
 	/* outline */
 	&-outline {
-		@apply border-current bg-transparent text-primary shadow-none hover:border-primary-700 hover:bg-primary-700 hover:text-white;
+		@apply border-current bg-transparent text-primary-950 shadow-none hover:border-primary hover:bg-primary hover:text-black;
 
 		&.btn-active {
 			@apply border-primary-700 bg-primary-700 text-white;
 		}
 
 		&.btn-secondary {
-			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-white;
+			@apply text-gray-800 hover:border-gray-500 hover:bg-gray-500 hover:text-black;
 
 			&.btn-active {
 				@apply border-secondary-600 bg-secondary-600 text-secondary-700;
@@ -270,7 +270,7 @@
 		}
 
 		&.btn-success {
-			@apply text-success hover:border-success hover:bg-success hover:text-white;
+			@apply text-success hover:border-success hover:bg-success hover:text-black;
 
 			&.btn-active {
 				@apply border-success bg-success text-white;
@@ -278,7 +278,7 @@
 		}
 
 		&.btn-warning {
-			@apply text-warning hover:border-warning hover:bg-warning hover:text-white;
+			@apply text-warning hover:border-warning hover:bg-warning hover:text-black;
 
 			&.btn-active {
 				@apply border-warning bg-warning text-white;
@@ -287,7 +287,7 @@
 
 		&.btn-error,
 		&.btn-error {
-			@apply text-error hover:border-error hover:bg-error hover:text-white;
+			@apply text-error hover:border-error hover:bg-error hover:text-black;
 
 			&.btn-active {
 				@apply border-error bg-error text-white;
