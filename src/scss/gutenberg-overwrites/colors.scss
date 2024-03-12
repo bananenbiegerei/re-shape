@@ -1,5 +1,5 @@
-has-red-50-color {
-	@apply text-red-50;
+has-error-50-color {
+	@apply text-error-50;
 }
 has-white-color {
 	@apply text-white;
@@ -11,11 +11,11 @@ has-gray-color {
 	@apply text-gray;
 }
 
-has-red-50-background-color {
-	@apply bg-red-50;
+has-error-50-background-color {
+	@apply bg-error-50;
 }
 has-white-background-color {
-	@apply bg-red-50;
+	@apply bg-error-50;
 }
 
 has-primary-50-background-color {

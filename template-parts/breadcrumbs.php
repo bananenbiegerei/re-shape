@@ -4,8 +4,6 @@ if (is_front_page() || is_404()) {
 	return;
 }
 
-
-
 global $post;
 $breadcrumbs = [];
 if ($post->post_parent) {
@@ -14,7 +12,7 @@ if ($post->post_parent) {
 	foreach ($anc as $k => $ancestor) {
 		$breadcrumbs[] =
 			'<li class="flex items-center">' .
-			($k > 0 ? bb_icon('caret-right', 'text-red-500 icon-xs') : '') .
+			($k > 0 ? bb_icon('caret-right', 'text-error-500 icon-xs') : '') .
 			'<a class="" href="' .
 			get_permalink($ancestor) .
 			'">' .
@@ -24,7 +22,6 @@ if ($post->post_parent) {
 } elseif (get_post_type() == 'projects') {
 	$breadcrumbs[] = '<li><a href="' . get_post_type_archive_link('projects') . '">' . __('Projects') . '</a></li>';
 } else {
-	
 }
 
 if (count($breadcrumbs) == 0) {

@@ -8,11 +8,11 @@
 	<button type="button" class="btn btn-xl">Button text</button>
 	<hr>
 	<h4>Default Buttons hollow</h4>
-	<button type="button" class="btn btn-xs btn-hollow">Button text</button>
-	<button type="button" class="btn btn-sm btn-hollow">Button text</button>
-	<button type="button" class="btn btn-hollow">Button text</button>
-	<button type="button" class="btn btn-lg btn-hollow">Button text</button>
-	<button type="button" class="btn btn-xl btn-hollow">Button text</button>
+	<button type="button" class="btn btn-xs btn-outline">Button text</button>
+	<button type="button" class="btn btn-sm btn-outline">Button text</button>
+	<button type="button" class="btn btn-outline">Button text</button>
+	<button type="button" class="btn btn-lg btn-outline">Button text</button>
+	<button type="button" class="btn btn-xl btn-outline">Button text</button>
 	<hr>
 	<h4>Default Buttons ghost</h4>
 	<button type="button" class="btn btn-xs btn-ghost">Button text</button>

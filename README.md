@@ -129,3 +129,18 @@ the theme to the server:
 - `gulpfile.js`
 - `package.*`
 - `tailwind.config.js`
+
+# Users Manual
+- copy the theme folder to your theme directory
+- go to your backend and activate the theme
+- Add menus
+  - Header
+  - Footer
+- Options
+  - Social Media
+  - Contact
+- Change Logos
+  - Big Logo
+  - Small Logo
+- Call To Action Buttons
+- 

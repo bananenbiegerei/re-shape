@@ -13,7 +13,7 @@
 			<?php if (get_field('link_fur_spenden', 'option')): ?>
 			<li>
 				<a
-					class="btn btn-red btn-hollow btn-sm btn-icon-left"
+					class="btn btn-error btn-outline btn-sm btn-icon-left"
 					href="<?php echo esc_url(get_field('link_fur_spenden', 'option')); ?>">
 					<?= bb_icon('heart', 'heartbeat icon-sm') ?>
 					<?php _e('Spenden'); ?>

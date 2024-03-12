@@ -1,38 +1,33 @@
-.menu {
-	&.horizontal {
-		@apply flex gap-3 relative items-center;
+//FIXME: need some cleanup here
+
+// Domains
+#navmenu_desktop_domains {
+	a {
+		&.current {
+			// Current domain or top-level page
+		}
 	}
+}
+
+// Menu items in dropdown
+#navmenu_desktop_dropdown {
 	li {
-		a {
-			@apply inline-flex items-center text-base py-2 px-4 font-alt hover:text-gray-600 leading-9;
+		&.current {
+			// Current page
 		}
-		&.current-menu-item {
-			a {
-				@apply bg-white;
-			}
-		}
-		&.font-bold {
-			a {
-				@apply text-2xl;
-			}
+		&.current {
+			@apply text-primary-500;
 		}
 	}
-	&.dropdown {
-		@apply flex flex-col space-y-2;
-		li {
-			a {
-				@apply w-full text-base py-1 px-2 hover:bg-primary-600 transition;
-			}
-		}
+}
+
+// Dropdown animations (could not get them to work with AlpineJS)
+#navmenu_desktop_dropdown {
+	& > div.invisible {
+		opacity: 0;
 	}
-	.dropdown-toggle {
-		@apply inline-flex items-center text-base py-1 px-2 hover:bg-primary-50 rounded transition;
-	}
-	li {		
-		&.current-menu-item {
-			a {				
-				@apply bg-primary;
-			}			
-		}
+	& > div.visible {
+		opacity: 1;
+		transition: opacity 0.2s;
 	}
 }

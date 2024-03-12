@@ -5,4 +5,4 @@
 
 define('WMDE_ALLOWED_WP_BLOCKS', ['core/group', 'core/column', 'core/columns', 'core/html', 'core/file']);
 
-require_once get_template_directory() . '/blocks/init.php';
+require_once get_template_directory() . '/bb-blocks/init.php';

@@ -120,7 +120,7 @@ module.exports = {
 							950: '#421508',
 							DEFAULT: '#F46E14',
 						},
-						red: {
+						error: {
 							50: '#fff0f2',
 							100: '#ffe2e6',
 							200: '#ffc9d4',
@@ -146,7 +146,7 @@ module.exports = {
 							800: '#383838',
 							900: '#313131',
 						},
-						green: {
+						success: {
 							50: '#edfcf4',
 							100: '#d2f9e2',
 							200: '#a9f1cb',
@@ -158,7 +158,21 @@ module.exports = {
 							800: '#095c3f',
 							900: '#084c35',
 						},
-						neon: {
+						warning: {
+							50: '#fffbec',
+							100: '#fff5d3',
+							200: '#ffe8a5',
+							300: '#ffd66d',
+							400: '#ffb832',
+							500: '#ffa00a',
+							600: '#ff8800',
+							DEFAULT: '#ff8800',
+							700: '#cc6402',
+							800: '#a14d0b',
+							900: '#82410c',
+							950: '#461f04',
+						},
+						highlight: {
 							50: '#fcffe5',
 							100: '#f5ffc8',
 							DEFAULT: '#ebff9a',
