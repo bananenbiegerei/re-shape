@@ -1,0 +1,3 @@
+[submodule "bb-blocks"]
+	path = bb-blocks
+	url = https://BananenbiegereiBerlin@bitbucket.org/BananenbiegereiBerlin/bb-blocks.git
