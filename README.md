@@ -1,13 +1,8 @@
-# BB Tailwind Starter Theme
+# Re:shape Theme
 
 ## Todo
 
 - @Eric: Add a `cleanUp` task to glup (to delete `css/*` and 'js/\*`)
-- @Eric: Add a `package` task to create a zip file of the theme ready to install on WordPress
-- @Eric: Add basic metadata in `head.php`
-- @Ingo: Do some cleanup of `src/scss/` to keep only the minimal required
-- @Ingo: Check that templates work to get a minimal functional site
-- @Ingo: Do some cleanup of template files to remove classes and styling
 
 ## Installation & Setup
 
@@ -129,6 +124,35 @@ the theme to the server:
 - `gulpfile.js`
 - `package.*`
 - `tailwind.config.js`
+
+
+
+# Submodule setup
+# BB Blocks
+
+This repository provides basic blocks such as images, text, etc. These blocks are designed for global use, meaning they are not custom-tailored for individual projects. They are intended to be compatible with multiple themes.
+
+## Installation
+
+Follow the steps below to install this project:
+
+```bash
+git clone https://BananenbiegereiBerlin@bitbucket.org/BananenbiegereiBerlin/bb-blocks.git
+npm install
+```
+To install submodules, use the following command:
+
+```bash
+git submodule update --init --recursive
+```
+The --recursive option is necessary due to the structure of our submodules:
+```bash
+- theme repo
+  - bb-locks submodule
+    - individual submodules like, for example, paragraph
+```
+
+
 
 # Users Manual
 - copy the theme folder to your theme directory
