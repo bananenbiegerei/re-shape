@@ -9,8 +9,8 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
 
 <body <?php body_class('flex flex-col min-h-screen'); ?>>
     <a href="#main-content" class="sr-only focus:not-sr-only"><?php _e('Skip to main content'); ?></a>
-    <header class="fixed top-0 w-full z-50">
-        <nav class="bg-white">
+    <header class="sticky top-0 w-full z-50">
+        <nav class="bg-gray">
             <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
                 <div>
                     <?php include locate_template('template-parts/header-top/logo-big.php'); ?>
@@ -26,7 +26,7 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <div class="hidden w-full md:block md:w-auto border-t py-8 md:py-0 md:border-none" id="navbar-default">
                     <?php if (has_nav_menu('nav')): ?>
                     <ul class="menu horizontal px-4 lg:px-0">
                         <?php wp_nav_menu($args); ?>
@@ -39,29 +39,6 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
                             href="<?php echo admin_url('nav-menus.php'); ?>"><?php _e('Edit Menus', BB_TEXT_DOMAIN); ?></a>
                     </div>
                     <?php endif; ?>
-                    <ul class="flex flex-col md:flex-row md:space-x-8">
-                        <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-white bg-primary-700 rounded md:bg-transparent md:text-primary-700 md:p-0"
-                                aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0">About</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0">Services</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0">Contact</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
