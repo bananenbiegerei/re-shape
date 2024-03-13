@@ -9,7 +9,7 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
 
 <body <?php body_class('flex flex-col min-h-screen'); ?> x-data="{ showMobileNav: false }">
     <a href="#main-content" class="sr-only focus:not-sr-only"><?php _e('Skip to main content'); ?></a>
-    <header class="sticky left-0 top-0 w-full bg-white z-50">
+    <header class="sticky left-0 top-0 w-full bg-gray z-50 border-b">
         <div class="flex flex-col justify-between flex-wrap lg:flex-row"
             :class="{ 'h-screen': showMobileNav, 'h-auto': !showMobileNav }">
             <div class="flex flex-none lg:flex-1">
@@ -47,7 +47,7 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
             </nav>
         </div>
     </header>
-    <main class="main-content flex-grow bg-green-200" id="main-content">
+    <main class="main-content flex-grow" id="main-content">
         <?php if (is_front_page()) { ?>
         <h1 class="sr-only">
             <?php
