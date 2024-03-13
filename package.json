@@ -45,6 +45,8 @@
 		"build": "gulp build"
 	},
 	"dependencies": {
+		"flowbite": "^2.3.0",
+		"follow-redirects": "^1.15.5",
 		"jquery": "^3.5.1",
 		"swiper": "^7.4.1"
 	}

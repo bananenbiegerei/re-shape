@@ -1,6 +1,7 @@
 import * as TW from './tailwindhelpers';
 import Alpine from 'alpinejs';
 import Swiper, { Navigation, Autoplay, Pagination, Mousewheel, EffectFade } from 'swiper';
+import 'flowbite';
 
 // Init Alpine
 window.Alpine = Alpine;
