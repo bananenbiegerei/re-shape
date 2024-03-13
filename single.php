@@ -7,7 +7,7 @@
 	  <div class="bg-gray">
 		  <div class="container grid grid-cols-12 pb-5">
 			  <div class="col-span-12 lg:col-span-10 lg:col-start-2">
-				  <?php get_template_part('template-parts/breadcrumbs'); ?>
+				  
 					<h1 class="text-2xl lg:text-5xl"><?php the_title(); ?></h1>
 					<?php if (has_excerpt()): ?>
 					  <div class="font-alt text-xl font-normal">
@@ -33,7 +33,7 @@
 	  <div class="bg-gray rounded-b-3xl pb-8">
 		  <div class="container grid grid-cols-12">
 			  <div class="col-span-12 lg:col-span-8 lg:col-start-3">
-				  <?php get_template_part('template-parts/breadcrumbs'); ?>
+				  
 					<h1 class="text-5xl"><?php the_title(); ?></h1>
 
 					<?php if (has_excerpt()): ?>

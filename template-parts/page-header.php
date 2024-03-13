@@ -1,8 +1,24 @@
-<?php if (has_post_thumbnail()): ?>
+<?php
+if (is_home()) {
+	$home_title = get_field('homepage_title', 'option');
+	$home_text = get_field('homepage_text', 'option');
+	$home_image = get_field('homepage_image', 'option');
+	$home_image_alt_text = get_post_meta($home_image, '_wp_attachment_image_alt', true);
+} ?>
+
+<?php if (is_home()) {
+	if (!empty($home_image)) {
+		$thumbnail_url = wp_get_attachment_image_url($home_image, 'full');
+	}
+} else {
+	$thumbnail_url = get_the_post_thumbnail_url();
+} ?>
+
+<?php if (!empty($thumbnail_url)): ?>
 <div class="bg-primary rounded-b-3xl min-h-[12rem] py-12">
     <div class="container grid grid-cols-12 gap-8">
         <div class="col-span-12 lg:col-span-6">
-            <h1 class=""><?php the_title(); ?></h1>
+            <h1 class=""><?php echo is_home() ? $home_title : the_title(); ?></h1>
             <?php if (has_excerpt()): ?>
             <div class="font-alt text-xl lg:text-2xl font-normal mb-10">
                 <?php echo strip_tags(get_the_excerpt()); ?>
@@ -10,61 +26,24 @@
             <?php endif; ?>
         </div>
         <div class="col-span-12 lg:col-span-6 relativ">
-            <?php get_template_part('template-parts/featured-image'); ?>
-            <div class="absolute -bottom-4 left-6">
-                <?php if (have_rows('call_to_actions_in_header')): ?>
-                <div class="mb-10">
-                    <?php while (have_rows('call_to_actions_in_header')):
-                    	the_row(); ?>
-                    <?php
-                    $link = get_sub_field('link') ? get_sub_field('link') : ['title' => 'Missing Link!', 'url' => '#', 'target' => '_self'];
-                    $color = get_sub_field('display')['color_dark'] ?? 'primary';
-                    if ($color == 'default') {
-                    	$color = 'primary';
-                    }
-                    ?>
-                    <div class="flex">
-                        <a class="btn btn-<?= $color ?> <?= $icon ? '' : '' ?>" href="<?= esc_url($link['url']) ?>"
-                            target="<?= esc_attr($link['target']) ?>">
-                            <?= esc_html($link['title']) ?>
-                        </a>
-                    </div>
-                    <?php
-                    endwhile; ?>
-                </div>
-                <?php endif; ?>
+            <div class="aspect-w-16 aspect-h-9">
+                <img class="object-cover w-full h-full rounded-lg" src="<?php echo $thumbnail_url; ?>"
+                    alt="<?php echo $home_image_alt_text; ?>">
             </div>
         </div>
     </div>
 </div>
 <?php else: ?>
-<div class="pb-10 rounded-b-3xl">
+<div class="bg-primary rounded-b-3xl min-h-[8rem]">
     <div class="container grid grid-cols-12">
         <div class="col-span-12 pt-5">
-            <?php get_template_part('template-parts/breadcrumbs'); ?>
             <h1><?php the_title(); ?></h1>
             <?php if (has_excerpt()): ?>
             <div class="font-alt text-xl lg:text-2xl font-normal mb-5">
                 <?php the_excerpt(); ?>
             </div>
             <?php endif; ?>
-            <?php if (have_rows('call_to_actions_in_header')): ?>
-            <div class="">
-                <?php while (have_rows('call_to_actions_in_header')):
-                	the_row(); ?>
-                <?php $cta_link = get_sub_field('cta_link'); ?>
-                <?php if ($cta_link): ?>
-                <a class="btn " href="<?php echo esc_url($cta_link['url']); ?>"
-                    target="<?php echo esc_attr($cta_link['target']); ?>">
-                    <?= bb_icon('arrow-right', 'icon-base') ?>
-                    <?php echo esc_html($cta_link['title']); ?></a>
-                <?php endif; ?>
-                <?php
-                endwhile; ?>
-            </div>
-            <?php endif; ?>
         </div>
-
     </div>
 </div>
 <?php endif; ?>
