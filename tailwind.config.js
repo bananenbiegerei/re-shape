@@ -67,6 +67,7 @@ module.exports = {
 		require('@tailwindcss/aspect-ratio'),
 		require('flowbite/plugin'),
 		require('@tailwindcss/forms'),
+		require('@tailwindcss/container-queries'),
 		require('tailwindcss-themer')({
 			defaultTheme: {
 				// put the default values of any config you want themed

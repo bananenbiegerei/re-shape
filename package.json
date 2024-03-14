@@ -48,6 +48,7 @@
 		"build": "gulp build"
 	},
 	"dependencies": {
+		"@tailwindcss/container-queries": "^0.1.1",
 		"flowbite": "^2.3.0",
 		"follow-redirects": "^1.15.5",
 		"jquery": "^3.5.1",

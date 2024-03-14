@@ -1,6 +1,6 @@
 </main>
 
-<footer class="bg-primary mt-36" aria-labelledby="footer-heading">
+<footer class="bg-primary" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only"><?php _e('Footer', BB_TEXT_DOMAIN); ?></h2>
     <div class="py-8 mb-12 lg:mb-0">
         <div class="container lg:flex lg:gap-20">
@@ -12,7 +12,7 @@
                 	'container' => 'nav',
                 	'menu' => 'footer',
                 	'menu_class' => 'flex flex-col lg:flex-row gap-5',
-                	'theme_location' => 'footer',
+                	'theme_location' => 'footer'
                 ]; ?>
                 <?php if (has_nav_menu('footer')): ?>
                 <?php wp_nav_menu($footer_args); ?>

@@ -9,7 +9,7 @@
     if ($count_sticky_posts > 0) {
     	$sticky_args = [
     		'post__in' => $sticky_posts,
-    		'ignore_sticky_posts' => 1,
+    		'ignore_sticky_posts' => 1
     	];
     	$sticky_query = new WP_Query($sticky_args);
     	if ($sticky_query->have_posts()) { ?>

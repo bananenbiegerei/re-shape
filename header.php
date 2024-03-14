@@ -11,7 +11,7 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
     <a href="#main-content" class="sr-only focus:not-sr-only"><?php _e('Skip to main content'); ?></a>
     <header class="sticky top-0 w-full z-50">
         <nav class="bg-gray">
-            <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <div>
                     <?php include locate_template('template-parts/header-top/logo-big.php'); ?>
                     <?php include locate_template('template-parts/header-top/logo-small.php'); ?>
