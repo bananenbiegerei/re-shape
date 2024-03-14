@@ -24,7 +24,7 @@ module.exports = {
 			'2xl': '1.5rem', // 24px -> h4
 			'3xl': '2rem', // 32px -> h3
 			'4xl': '2.5rem', // 40px -> h2
-			'5xl': '3.5rem', // 56px -> h1
+			'5xl': '3rem', // 56px -> h1
 			'6xl': '9.375rem', // 150px
 			'3vw': '10vw',
 		},

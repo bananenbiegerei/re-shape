@@ -1,8 +1,10 @@
 #!/bin/sh
 mkdir -p dist
 
+SLUG=$(basename "$(pwd)")
+
 # Update version number with build timestamp
-TS=`date +%Y%m%d%H%M%S`
+TS=`date +%y%j%H%M`
 VERSION=`grep Version style.css | awk '{ print $3 }' | cut -d . -f -1,2`.$TS
 sed  -i '' -e "s/Version:.*/Version:        $VERSION/" style.css
 
@@ -11,20 +13,21 @@ sed  -i '' -e "s/Version:.*/Version:        $VERSION/" style.css
 
 # Creates a zip file of the theme ready to upload to WordPress
 cd ..
-zip wmde-re-shape-$TS.zip wmde-re-shape -rv \
-	-x \*/.DS_Store \
-	-x wmde-re-shape/.babelrc \
-	-x wmde-re-shape/.env\* \
-	-x wmde-re-shape/.git\* \
-	-x wmde-re-shape/.nova/\* \
-	-x wmde-re-shape/blocks/.git\* \
-	-x wmde-re-shape/blocks/\*/style.scss \
-	-x wmde-re-shape/dist/\* \
-	-x wmde-re-shape/gulpfile.js \
-	-x wmde-re-shape/mktheme.sh \
-	-x wmde-re-shape/node_modules/\* \
-	-x wmde-re-shape/package\*.json \
-	-x wmde-re-shape/\*.md \
-	-x wmde-re-shape/\*/\*.md \
-	-x wmde-re-shape/src/\*
-mv wmde-re-shape-$TS.zip wmde-re-shape/dist/
+zip $SLUG-$TS.zip $SLUG -rv \
+  -x \*/.DS_Store \
+  -x $SLUG/.babelrc \
+  -x $SLUG/.env\* \
+  -x $SLUG/.git\* \
+  -x $SLUG/.nova/\* \
+  -x $SLUG/blocks/.git\* \
+  -x $SLUG/blocks/\*/style.scss \
+  -x $SLUG/dist/\* \
+  -x $SLUG/gulpfile.js \
+  -x $SLUG/mktheme.sh \
+  -x $SLUG/node_modules/\* \
+  -x $SLUG/package\*.json \
+  -x $SLUG/\*.md \
+  -x $SLUG/\*/\*.md \
+  -x $SLUG/src/\*
+mv $SLUG-$TS.zip $SLUG/dist/
+cp $SLUG/dist/$SLUG-$TS.zip $SLUG/dist/$SLUG.zip

@@ -1,5 +1,5 @@
 {
-	"main": "webpack.mix.js",
+	"main": "",
 	"license": "MIT",
 	"name": "bb-tailwind",
 	"version": "1.0.0",
@@ -32,7 +32,6 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"postcss-cli": "^10.1.0",
-		"postcss-reduce-initial": "^6.1.0",
 		"prettier": "^2.8.8",
 		"prettier-plugin-tailwindcss": "^0.2.5",
 		"sass": "^1.32.8",
@@ -42,17 +41,15 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"scripts": {
-		"start": "gulp",
-		"dev": "gulp",
-		"watch": "gulp",
-		"build": "gulp build"
+		"dev": "npm run dev",
+		"build": "npm run build",
+		"package": "npm run package",
 	},
 	"dependencies": {
+		"@swup/fragment-plugin": "^1.0.0",
 		"@tailwindcss/container-queries": "^0.1.1",
-		"flowbite": "^2.3.0",
-		"follow-redirects": "^1.15.5",
 		"jquery": "^3.5.1",
-		"postcss-reduce-transforms": "^6.0.2",
-		"swiper": "^7.4.1"
+		"swiper": "^7.4.1",
+		"swup": "^4.6.0"
 	}
 }
