@@ -25,7 +25,7 @@ add_action(
 		// Site style
 		wp_enqueue_style('style', get_template_directory_uri() . '/css/site.css', [], '', 'all');
 	},
-	999,
+	999
 );
 
 // Editor style and script: only enqueue if editing a post
@@ -38,5 +38,5 @@ add_action(
 			wp_enqueue_style('editor-wmde', get_template_directory_uri() . '/css/editor.css', [], '', 'all');
 		}
 	},
-	999,
+	999
 );

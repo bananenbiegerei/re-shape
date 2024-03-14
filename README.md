@@ -8,11 +8,11 @@ Follow the steps below to install this project:
 3. Install Git Submodules of BB Blocks
 4. Install Node Modules
 
-### 1. Clone Repository
+### Clone Repository
 ```bash
 git clone https://BananenbiegereiBerlin@bitbucket.org/BananenbiegereiBerlin/bb-blocks.git
 ```
-### 2. Install Node Modules
+### Install Git Submodules
 
 To install BB Blocks Sumbodules:
 
@@ -23,7 +23,7 @@ Optional:
 ```bash
 git submodule update
 ```
-### 3. Install Git Submodules of BB Blocks
+### 3. Install Git Submodules of BB Blocks Submodule (nested Submodules)
 To install sumbodules of BB Block Submodule:
 ```bash
 git submodule update --init --recursive
