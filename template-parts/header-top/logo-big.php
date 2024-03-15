@@ -3,7 +3,7 @@
     <?php
     $attachment_id = $logo_big;
     $size = 'full'; // (thumbnail, medium, large, full or custom size)
-    echo wp_get_attachment_image($attachment_id, $size, false, ['class' => 'h-16 w-auto lg:block hidden m-4']);
+    echo wp_get_attachment_image($attachment_id, $size, false, ['class' => 'h-10 w-auto lg:block hidden m-4']);
     ?>
 </a>
 <?php else: ?>

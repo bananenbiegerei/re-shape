@@ -3,8 +3,8 @@
     "title": "Theme Options",
     "fields": [
         {
-            "key": "field_63ee387b9db6a",
-            "label": "Kontakte",
+            "key": "field_65f176cf0843e",
+            "label": "Homepage Content",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -20,11 +20,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_63ee38899db6b",
-            "label": "Kontakt Spendenservice",
-            "name": "kontakt_spendenservice",
+            "key": "field_65f176e10843f",
+            "label": "Homepage Title",
+            "name": "homepage_title",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,10 +34,72 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "wmde",
-            "media_upload": 0,
-            "delay": 0
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f176f708440",
+            "label": "Homepage Excerpt",
+            "name": "homepage_excerpt",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_65f1771b08441",
+            "label": "Homepage Image",
+            "name": "homepage_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63ee387b9db6a",
+            "label": "Kontakte",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_63ee38b99db6c",
@@ -231,5 +293,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710240185
+    "modified": 1710323909
 }

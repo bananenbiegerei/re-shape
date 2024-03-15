@@ -1,5 +1,5 @@
 .container {
-	@apply lg:max-w-screen-2xl lg:mx-auto max-w-full lg:px-4;
+	@apply lg:max-w-screen-2xl lg:mx-auto max-w-full px-4;
 }
 .mobile-grid {
 	@apply grid grid-cols-2 xl:grid-cols-1 gap-10 xl:gap-0;

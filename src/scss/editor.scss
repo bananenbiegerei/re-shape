@@ -8,6 +8,9 @@
 @import '../../blocks/**/style.scss';
 
 html :where(.editor-styles-wrapper) {
+	&.block-editor-writing-flow {
+		@apply container mx-auto;
+	}
 	h1,
 	h2,
 	h3,
@@ -16,23 +19,7 @@ html :where(.editor-styles-wrapper) {
 	h6 {
 		@apply font-medium font-alt;
 	}
-}
-
-// Apply container width to all blocks
-html :where(.wp-block) {
-	@apply max-w-screen-2xl mx-auto px-6;
-}
-
-// Specific settings for blocks in editor
-html :where(.wp-block) {
-	@import '../../blocks/**/editor.scss';
-}
-
-// ACF
-.edit-post-meta-boxes-area #poststuff .stuffbox > h3,
-.edit-post-meta-boxes-area #poststuff h2.hndle,
-.edit-post-meta-boxes-area #poststuff h3.hndle {
-	font-weight: 400;
-	padding: 16px;
-	font-size: inherit;
+	p {
+		@apply font-sans;
+	}
 }

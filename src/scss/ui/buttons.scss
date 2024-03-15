@@ -1,6 +1,6 @@
 // Unstyled
 .btn {
-	@apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-start rounded-md border-transparent text-left text-xl leading-none transition duration-200 ease-out;
+	@apply inline-flex cursor-pointer select-none items-center justify-start rounded-md border-transparent text-left text-xl leading-none transition duration-200 ease-out;
 	//@apply min-h-12 h-12 px-4;
 	@apply px-2.5 py-1.5;
 

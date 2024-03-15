@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-	content: ['./**/*.php'],
+	content: ['./**/*.php', './node_modules/flowbite/**/*.js'],
 	safelist: [
 		{
 			pattern: /(sm:|md:|lg:|)justify-*/,
@@ -24,7 +24,7 @@ module.exports = {
 			'2xl': '1.5rem', // 24px -> h4
 			'3xl': '2rem', // 32px -> h3
 			'4xl': '2.5rem', // 40px -> h2
-			'5xl': '3.5rem', // 56px -> h1
+			'5xl': '3rem', // 56px -> h1
 			'6xl': '9.375rem', // 150px
 			'3vw': '10vw',
 		},
@@ -65,12 +65,9 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/aspect-ratio'),
-		// plugin(function ({ addBase }) {
-		// 	addBase({
-		// 		//				html: { fontSize: '6px' },
-		// 	});
-		// }),
+		require('flowbite/plugin'),
 		require('@tailwindcss/forms'),
+		require('@tailwindcss/container-queries'),
 		require('tailwindcss-themer')({
 			defaultTheme: {
 				// put the default values of any config you want themed

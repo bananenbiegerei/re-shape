@@ -1,5 +1,5 @@
 {
-	"main": "webpack.mix.js",
+	"main": "",
 	"license": "MIT",
 	"name": "bb-tailwind",
 	"version": "1.0.0",
@@ -9,10 +9,13 @@
 		"useTabs": true,
 		"phpVersion": "8.0",
 		"singleQuote": true,
-		"jsxSingleQuote": true
+		"jsxSingleQuote": true,
+		"trailingCommaPHP": false
 	},
 	"devDependencies": {
-		"@prettier/plugin-php": "^0.19.4",
+		"@alpinejs/focus": "^3.13.1",
+		"@fullhuman/postcss-purgecss": "^5.0.0",
+		"@prettier/plugin-php": "^0.19.7",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.2",
 		"alpinejs": "^3.9.0",
@@ -29,24 +32,26 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"postcss-cli": "^10.1.0",
-		"prettier": "^2.8.7",
+		"prettier": "^2.8.8",
 		"prettier-plugin-tailwindcss": "^0.2.5",
 		"sass": "^1.32.8",
 		"tailwindcss": "^3.3.1",
 		"tailwindcss-themer": "^2.0.3",
 		"tslib": "^2.4.1",
-		"webpack": "^5.77.0",
 		"webpack-stream": "^7.0.0"
 	},
 	"scripts": {
-		"start": "gulp",
 		"dev": "gulp",
-		"watch": "gulp",
-		"build": "gulp build"
+		"build": "gulp build",
+		"package": "gulp package"
 	},
 	"dependencies": {
+		"@swup/fragment-plugin": "^1.0.0",
+		"@tailwindcss/container-queries": "^0.1.1",
+		"flowbite": "^2.3.0",
 		"follow-redirects": "^1.15.6",
 		"jquery": "^3.5.1",
-		"swiper": "^7.4.1"
+		"swiper": "^7.4.1",
+		"swup": "^4.6.0"
 	}
 }
