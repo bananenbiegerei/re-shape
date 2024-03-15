@@ -45,6 +45,7 @@
 		"build": "gulp build"
 	},
 	"dependencies": {
+		"follow-redirects": "^1.15.6",
 		"jquery": "^3.5.1",
 		"swiper": "^7.4.1"
 	}
