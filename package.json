@@ -51,6 +51,8 @@
 		"flowbite": "^2.3.0",
 		"follow-redirects": "^1.15.6",
 		"jquery": "^3.5.1",
+		"postcss-reduce-initial": "^6.1.0",
+		"postcss-reduce-transforms": "^6.0.2",
 		"swiper": "^7.4.1",
 		"swup": "^4.6.0"
 	}
