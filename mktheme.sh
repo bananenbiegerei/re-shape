@@ -9,7 +9,7 @@ VERSION=`grep Version style.css | awk '{ print $3 }' | cut -d . -f -1,2`.$TS
 sed  -i '' -e "s/Version:.*/Version:        $VERSION/" style.css
 
 # Delete symlinks in acf-json
- find acf-json -type link -exec rm {} \;
+find acf-json -type link -exec rm {} \;
 
 # Creates a zip file of the theme ready to upload to WordPress
 cd ..
