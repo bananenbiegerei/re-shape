@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 @import './ui/*';
-@import './components/*';
+//@import './components/*';
 @import './gutenberg-overwrites/*';
 @import '../../blocks/**/style.scss';
 
 html :where(.editor-styles-wrapper) {
+	@apply font-sans;
 	&.block-editor-writing-flow {
 		@apply container mx-auto;
 	}
