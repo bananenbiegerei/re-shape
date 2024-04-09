@@ -36,8 +36,9 @@ ul:not([class]),
 ol:not([class]) {
 	@apply leading-normal text-lg lg:text-xl font-robotonormal mb-6 max-w-4xl;
 }
-.topline {
-	@apply uppercase font-bold font-alt text-sm text-primary;
+
+ol:not([class]) {
+	@apply list-decimal ml-5;
 }
 
 .main-content {

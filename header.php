@@ -35,8 +35,12 @@ $args = ['menu_class' => 'menu', 'items_wrap' => '%3$s', 'theme_location' => 'na
                     <div class="border-2 my-2 border-error border-dotted rounded-2xl p-4">
                         <h3>
                             <?php _e('No menu assigned!', BB_TEXT_DOMAIN); ?>
-                        </h3> <a class="btn btn-error"
-                            href="<?php echo admin_url('nav-menus.php'); ?>"><?php _e('Edit Menus', BB_TEXT_DOMAIN); ?></a>
+                        </h3>
+                        <?php if (current_user_can('edit_theme_options')) : ?>
+                        <a class="btn btn-error" href="<?php echo admin_url('nav-menus.php'); ?>">
+                            <?php _e('Edit Menus', BB_TEXT_DOMAIN); ?>
+                        </a>
+                        <?php endif; ?>
                     </div>
                     <?php endif; ?>
                 </div>
