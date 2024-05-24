@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './ui/*';
+//@import './components/*';
+@import './gutenberg-overwrites/*';
+@import '../../blocks/**/style.scss';
+
+html :where(.editor-styles-wrapper) {
+	@apply font-sans;
+	&.block-editor-writing-flow {
+		@apply container mx-auto;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-medium font-alt;
+	}
+	p {
+		@apply font-sans;
+	}
+}

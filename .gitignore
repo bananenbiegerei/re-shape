@@ -1,0 +1,8 @@
+/.env
+/node_modules
+/dist
+/css
+/js
+.DS_Store
+/.nova
+/.nova/Configuration.json

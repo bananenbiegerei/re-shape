@@ -1,0 +1,35 @@
+.menu {
+	&.horizontal {
+		@apply flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0;
+	}
+	li {
+		a {
+			@apply flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700;
+		}
+		&.current-menu-item {
+			a {
+				@apply block py-2 px-3 text-black bg-primary rounded;
+			}
+		}
+	}
+}
+
+/* Pagination */
+#pagination.pagination {
+	@apply flex items-center -space-x-px h-8 mb-12;
+	.page-numbers {
+		@apply py-2 px-4 border border-gray-400 text-black relative z-10 hover:bg-gray-100;
+		&.current {
+			@apply border-primary bg-primary-100 text-black z-20;
+		}
+		&.dots {
+			@apply border-none;
+		}
+		&.next {
+			@apply rounded-r-lg;
+		}
+		&.prev {
+			@apply rounded-l-lg;
+		}
+	}
+}

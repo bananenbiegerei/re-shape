@@ -1,0 +1,9 @@
+ol.comment-list {
+    @apply mb-24;
+    ol.children {
+        @apply mb-12;
+    }
+    ol {
+        @apply ml-12 flex flex-col gap-4;
+    }
+}
