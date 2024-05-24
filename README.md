@@ -38,7 +38,10 @@ npm run build
 ```
 For creating an archive to install the theme run `npm run package`. A zip will be created in `dist` with a timestamped theme version.
 
-# Users Manual
+# Users Manual = Setup Wordpress Theme
+
+You have to have Wordpress installation up and running. Then you can install our theme.
+
 1. Install Theme
 2. Edit Theme Settings
 3. Edit Content
