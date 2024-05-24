@@ -139,16 +139,12 @@
 	}
 
 	&-disabled {
-		@apply border-gray bg-gray text-gray-700 outline-gray;
+		@apply border-gray bg-gray text-gray-500 outline-gray;
 
 		@media (hover: hover) {
 			&:hover {
 				@apply border-gray-600 bg-gray-600;
 			}
-		}
-
-		&.btn-active {
-			@apply border-gray-600 bg-gray-600;
 		}
 	}
 

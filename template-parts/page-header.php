@@ -1,7 +1,7 @@
 <?php
 if (is_home()) {
 	$home_title = get_field('homepage_title', 'option');
-	$home_text = get_field('homepage_text', 'option');
+	$home_text = get_field('homepage_excerpt', 'option');
 	$home_image = get_field('homepage_image', 'option');
 	$home_image_alt_text = get_post_meta($home_image, '_wp_attachment_image_alt', true);
 } ?>
@@ -19,11 +19,7 @@ if (is_home()) {
     <div class="container grid grid-cols-12 gap-8">
         <div class="col-span-12 lg:col-span-6">
             <h1 class=""><?php echo is_home() ? $home_title : the_title(); ?></h1>
-            <?php if (has_excerpt()): ?>
-            <div class="font-alt text-xl lg:text-2xl font-normal mb-10">
-                <?php echo strip_tags(get_the_excerpt()); ?>
-            </div>
-            <?php endif; ?>
+            <?php include locate_template('template-parts/excerpt-query.php'); ?>
         </div>
         <div class="col-span-12 lg:col-span-6 relativ">
             <div class="aspect-w-16 aspect-h-9">
@@ -38,11 +34,7 @@ if (is_home()) {
     <div class="container grid grid-cols-12">
         <div class="col-span-12 pt-5">
             <h1><?php the_title(); ?></h1>
-            <?php if (has_excerpt()): ?>
-            <div class="font-alt text-xl lg:text-2xl font-normal mb-5">
-                <?php the_excerpt(); ?>
-            </div>
-            <?php endif; ?>
+            <?php include locate_template('template-parts/excerpt-query.php'); ?>
         </div>
     </div>
 </div>

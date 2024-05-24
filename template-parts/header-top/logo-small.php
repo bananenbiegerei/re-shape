@@ -11,7 +11,7 @@
     <h3>
         <?php _e('No logo assigned (Small)!', BB_TEXT_DOMAIN); ?>
     </h3>
-    <a class="btn btn-error" href="<?php echo admin_url('admin.php?page=acf-options'); ?>">
+    <a class="btn btn-error" href="<?php echo esc_url(get_site_url()); ?>/wp-admin/admin.php?page=theme-settings">
         <?php _e('Edit Logo', BB_TEXT_DOMAIN); ?>
     </a>
 </div>

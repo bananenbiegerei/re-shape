@@ -36,7 +36,7 @@
         } ?>
     </div>
     <!-- Add this code for pagination -->
-    <div class="pagination">
+    <div id="pagination" class="pagination">
         <?php echo paginate_links(['total' => $normal_query->max_num_pages, 'prev_text' => __('« Previous'), 'next_text' => __('Next »')]); ?>
     </div>
     <?php } // Reset the post data
